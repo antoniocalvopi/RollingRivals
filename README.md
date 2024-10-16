@@ -1,5 +1,3 @@
----
-
 # Rolling Rivals - Carrera de Canicas (Entrega 2 / html)
 
 ## Descripción
