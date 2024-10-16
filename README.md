@@ -116,8 +116,6 @@ Este archivo PHP actúa como un servidor de *Server-Sent Events* (SSE) que enví
 
 Este script se ejecuta en un servidor privado, en caso de fallo en el src del proyecto se encuenta el .php para poder alojarlo.
 
-Aquí tienes una versión mejorada para el README:
-
 ### **Errores Comunes**:
 
 1. **Conexión a través de Eduroam**:
