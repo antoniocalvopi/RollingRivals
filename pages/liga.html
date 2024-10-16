@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ligas</title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo.png" style="width: 30px; height: 30px;" alt="logo">RR</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/actividades.html">Actividades</a>
+                    <ul>
+                        <li><a href="../pages/liga.html">Ligas</a></li>
+                        <li><a href="../pages/campeonato.html">Campeonato</a></li>
+                        <li><a href="../pages/estadios.html">Estadios</a></li>  
+                    </ul>
+                </li>
+                <li><a href="../pages/nosotros.html">Nosotros</a></li> 
+                <li><a href="../pages/download.html">Download</a></li>
+                <li><a href="../pages/shop.html">Tienda</a></li>
+                <li><a href="../pages/gallery.html">Galería</a></li>
+                <li><a href="../pages/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Seccion Liga-->
+    <div id="seccion_liga" class="league-section">
+        <h2>Clasificación por liga</h2>
+        <table class="league-table">
+            <thead>
+                <tr>
+                    <th>Liga</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Avg Score</th>
+                </tr>
+            </thead>
+            <tbody id="leagueBody">
+            
+            </tbody>
+        </table>
+    <div id="error"></div>
+    
+    </div>
+
+    <script>
+        // Comprobar si el navegador soporta SSE
+        if (typeof(EventSource) !== "undefined") {
+            // Crear la conexión con SSE
+            var source = new EventSource("http://83.32.217.29:8300/sse.php");
+    
+            // Manejar los datos recibidos del servidor
+            source.onmessage = function(event) {
+                // Parsear los datos recibidos (suponemos que el servidor envía un array JSON)
+                let data = JSON.parse(event.data);
+    
+                // Obtener el tbody de la tabla
+                let tbody = document.getElementById("leagueBody");
+    
+                // Limpiar el contenido anterior de la tabla
+                tbody.innerHTML = "";
+    
+                // Recorrer los datos y agregarlos a la tabla
+                data.forEach(team => {
+                    let row = `
+                        <tr>
+                            <td>${team.team}</td>
+                            <td>${team.wins}</td>
+                            <td>${team.losses}</td>
+                            <td>${((team.wins / (team.wins + team.losses)) * 100).toFixed(2)}%</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                });
+            };
+    
+            // Manejar errores en la conexión SSE
+            source.onerror = function() {
+                document.getElementById("error").innerHTML = "Error de conexión con SSE";
+                source.close(); // Cierra la conexión si hay un error
+            };
+        } else {
+            // Si el navegador no soporta SSE
+            document.getElementById("error").innerHTML = "Tu navegador no soporta Server-Sent Events.";
+        }
+    </script>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../img/logo.png" alt="Logo" class="footer-logo-img">
+        <a href="" class="boton-descarga" download>Download button</a>
+        <p>Antonio Calvo Picón</p>
+        <div class="redes-sociales">
+            <a href="https://facebook.com" class="social-icon" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" class="social-icon" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>        
+    </div>
+
+    <div class="footer-web-pages">
+        <h4>WEB PAGES</h4>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/actividades.html">Actividades</a></li>
+            <li><a href="../pages/actividades.html#seccion_liga">Liga</a></li>
+            <li><a href="../pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
+            <li><a href="../pages/actividades.html#seccion_estadios">Estadios</a></li>
+            <li><a href="../pages/shop.html">Tienda</a></li>
+            <li><a href="../pages/gallery.html">Galería</a></li>
+            <li><a href="../pages/download.html">Download</a></li>
+            <li><a href="../pages/contact.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-redes">
+        <h4>REDES</h4>
+        <ul>
+            <li>
+                <a href="https://facebook.com" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+           <li>
+                <a href="https://twitter.com" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+           </li>
+            <li>
+                <a href="https://instagram.com" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://tiktok.com" class="social-icon" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://discord.com" class="social-icon" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-desarrollador">
+        <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
+        <ul>
+            <li>Developer</li>
+            <li>DyPW</li>
+            <li>2024 - 2025</li>
+            <li>Práctica DyPW</li>
+        </ul>
+    </div>
+
+    <div class="visitas">
+        <div class="counter">
+            Visitaste la página:: <span id="localCount">0</span>
+        </div>
+    </div>
+    <!-- Funcionamiento contador local -->
+    <script src="../js/contador.js"></script>
+</footer>
+</body>
+</html>

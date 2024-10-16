@@ -1,0 +1,22 @@
+.galeria {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.galeria-contenedor {
+    display: flex; /* Usar flexbox para alinear los elementos en fila */
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    padding: 10px; /* Espaciado interno */
+}
+
+.galeria-item {
+    flex: 0 0 auto; /* Evitar que los elementos se ajusten en tamaño */
+    margin-right: 10px; /* Espaciado entre los elementos */
+}
+
+.galeria-item img {
+    width: 200px; /* Ancho fijo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}

@@ -1,0 +1,77 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.details h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.details p {
+    margin: 5px 0 0;
+}
+
+.tag {
+    background-color: #444;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.difficulty {
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.pro {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.medium {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.easy {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.view-lineups, .see-more {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-lineups:hover, .see-more:hover {
+    background-color: #c0392b;
+}

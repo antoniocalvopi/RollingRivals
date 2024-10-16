@@ -1,0 +1,40 @@
+.footer {
+    background-color: #f1f1f1; /* Color de fondo del footer */
+    display: flex; /* Usar flexbox para organizar los elementos en fila */
+    justify-content: space-around; /* Espaciado entre las columnas */
+    padding: 20px; /* Espaciado interno del footer */
+}
+
+.footer-logo {
+    text-align: center; /* Centrar el contenido en la sección del logo */
+}
+
+.footer-logo-img {
+    max-width: 150px; /* Limitar el tamaño del logo */
+    height: auto; /* Mantener la proporción */
+}
+
+.redes-sociales {
+    margin-top: 10px; /* Espacio entre el texto y los iconos sociales */
+}
+
+.social-icon {
+    margin: 0 5px; /* Espaciado entre los iconos */
+}
+
+.footer-web-pages, .footer-redes, .footer-desarrollador {
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.footer h4 {
+    margin-bottom: 10px; /* Espacio entre el título y la lista */
+}
+
+.footer ul {
+    list-style-type: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding de la lista */
+}
+
+.footer li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+}
