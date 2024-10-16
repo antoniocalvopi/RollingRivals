@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0E1015;
+    color: #fff;
+    font-size: 1em;
+}
+
+section {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+section a {
+    display: inline-block;
+    background-color: #ff4757;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+section.game_banner div {
+    position: absolute;
+    bottom: 20%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+section.game_banner a {
+    width: 40%;
+}
+
+section.game_banner h1 {
+    font-size: 6em;
+}
+
+section.game_banner h1::selection {
+    user-select: none;
+}
+
+section.game_banner h1:hover {
+    cursor: default;
+}
+
+
+/* Clasificación por Ligas */
+.clasificacion-ligas {
+    background-color: #1c1c1c;
+    border: 1px solid #ffffff52;
+}
+
+.clasificacion-ligas h3 {
+    padding-top: 20px;
+}
+
+.clasificacion-ligas h3, h4 {
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.clasificacion-ligas h3{
+    font-size: 24px;
+    color: #fff;
+}
+
+.clasificacion-ligas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clasificacion-ligas th, 
+.clasificacion-ligas td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.clasificacion-ligas th {
+    background-color: #2e2e2e;
+}
+
+.clasificacion-ligas tbody tr:hover {
+    background-color: #444;
+    box-shadow: 0px 0px 10px#666;
+    border: 1px solid #666;
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    justify-content: right;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+.semi-rounded {
+    border-radius: 10px;
+}
+
+.marpad {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.margin {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.margin5-bot {
+    margin-bottom: 5px;
+}
+
+
+.boton-descarga {
+    display: inline-block;
+    padding: 15px;
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    width: auto;
+}
+
+.boton-descarga:hover {
+    background-color: #ff6b81;
+}
+
+.btn2 a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.btn2 a:hover {
+    background-color: #ff6b81;
+}
+
+@keyframes clickanimation {
+    0% {
+        transform: scale(1);
+        background-color: #aa303a;
+      }
+      100% {
+        transform: scale(0.9);
+        background-color: #aa303a;
+      }
+      
+}
+
+.btn3 {
+    box-shadow: 0px 0px 10px#ff6b81;
+    border: 1px solid #ff6b81;
+    background-color: #ff4757;
+    animation: clickanimation 0.3s;
+}
+
+.btn3:hover {
+    background-color: #aa303a;
+}

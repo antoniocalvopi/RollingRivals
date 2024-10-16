@@ -1,40 +1,78 @@
-.footer {
-    background-color: #f1f1f1; /* Color de fondo del footer */
-    display: flex; /* Usar flexbox para organizar los elementos en fila */
-    justify-content: space-around; /* Espaciado entre las columnas */
-    padding: 20px; /* Espaciado interno del footer */
-}
-
-.footer-logo {
-    text-align: center; /* Centrar el contenido en la sección del logo */
+/* Footer */
+footer {
+    background-color: #07090E;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .footer-logo-img {
-    max-width: 150px; /* Limitar el tamaño del logo */
-    height: auto; /* Mantener la proporción */
-}
-
-.redes-sociales {
-    margin-top: 10px; /* Espacio entre el texto y los iconos sociales */
+    width: 15%;
+    height: auto;
 }
 
 .social-icon {
-    margin: 0 5px; /* Espaciado entre los iconos */
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+    text-decoration: none;
 }
 
-.footer-web-pages, .footer-redes, .footer-desarrollador {
-    text-align: left; /* Alinear el texto a la izquierda */
+.social-icon i{
+    padding-right: 0.5em;
 }
 
-.footer h4 {
-    margin-bottom: 10px; /* Espacio entre el título y la lista */
+.social-icon:hover {
+    color: #ff4757;
 }
 
-.footer ul {
-    list-style-type: none; /* Quitar los puntos de la lista */
-    padding: 0; /* Quitar el padding de la lista */
+.footer-web-pages h4, .footer-redes h4, .footer-desarrollador h4 {
+    color: #787B81;
+    font-size: 1em;
 }
 
-.footer li {
-    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+.footer-web-pages ul, .footer-redes ul, .footer-desarrollador ul {
+    list-style-type: none;
+}
+
+.footer-web-pages ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-web-pages ul li a:hover {
+    color: #ff4757;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    color: #787B81;       
+    width: 100%;      
+}
+
+.footer-bottom p, .footer-bottom a {            
+    padding: 0 15px;         
+}
+
+.footer-bottom a {
+    text-decoration: none;    
+    color: #787B81;             
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+.visitas {
+    text-align: center;
+}
+
+.counter {
+    color: #787B81;
 }

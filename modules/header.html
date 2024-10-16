@@ -1,0 +1,186 @@
+<head>
+    <style>
+        header {
+            background-color: #0E1015;
+            padding: 20px;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a img {
+            margin-right: 10px;
+        }
+
+        .logo:hover {
+            opacity: 60%;
+            transition: 1000ms;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            cursor: pointer;
+            text-decoration: none;
+            color: #484B51;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: #ff4757;
+        }
+
+        nav ul li.selected i {
+            color: #ff4757;
+        }
+
+        nav ul li.selected a {
+            color: #fff;
+            padding: 5px;
+            border-bottom: 5px solid #ff4757;
+        }
+
+        nav ul li.selected ul li a {
+            border: none;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #0E1015;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li:hover > a {
+            background-color: #ff4757;
+            color: #fff;
+        }
+
+        nav ul ul li {
+            width: 230px;
+            float: none;
+            display: list-item;
+        }
+
+        nav ul ul li a {
+            margin: 0;
+            padding: 10px 15px;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        nav ul ul li a:hover {
+            color: #ff4757;
+            background-color: transparent;
+        }
+
+        li > a:after,
+        li.selected > a:after {
+            content: ' ▼';
+        }
+
+        li > a:only-child:after,
+        li.selected > a:only-child:after {
+            content: '';
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .header-right a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #484B51;
+            padding: 10px 15px;
+        }
+
+        .header-right a:hover {
+            color: #ff4757;
+        }
+
+        .header-right a.sign-in {
+            background-color: transparent;
+            border: 2px solid #484B51;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-right a.sign-in:hover {
+            color: #ff4757;
+            background-color: #484B51;
+        }
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <a href="/index.html"><img src="/img/logo.png" style="width: 30px; height: 30px;" alt="logo">RR</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li>
+                <a href="/pages/actividades.html">Actividades</a>
+                <ul>
+                    <li><a href="/pages/liga.html">Ligas</a></li>
+                    <li><a href="/pages/campeonato.html">Campeonato</a></li>
+                    <li><a href="/pages/estadios.html">Estadios</a></li>
+                </ul>
+            </li>
+            <li><a href="/pages/nosotros.html">Nosotros</a></li>
+            <li><a href="/pages/download.html">Download</a></li>
+            <li><a href="/pages/shop.html">Tienda</a></li>
+            <li><a href="/pages/gallery.html">Galería</a></li>
+            <li><a href="/pages/contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="header-right">
+        <a href="/pages/english.html">English</a>
+        <a href="/pages/signin.html" class="sign-in">Sign In</a>
+    </div>
+</header>

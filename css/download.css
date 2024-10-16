@@ -1,0 +1,14 @@
+.descarga {
+    padding: 40px;
+    text-align: center;
+}
+
+.descarga h1 {
+    margin-bottom: 20px;
+    color: #ff4757;
+    font-size: 28px;
+}
+
+.descarga p {
+    margin-bottom: 20px;
+}
