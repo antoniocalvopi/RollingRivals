@@ -81,12 +81,13 @@
                     tbody.innerHTML += row;
                 });
             };
-    
+            
             // Manejar errores en la conexión SSE
             source.onerror = function() {
                 document.getElementById("error").innerHTML = "Error de conexión con SSE";
                 source.close(); // Cierra la conexión si hay un error
             };
+            
         } else {
             // Si el navegador no soporta SSE
             document.getElementById("error").innerHTML = "Tu navegador no soporta Server-Sent Events.";

@@ -95,6 +95,39 @@ La información sobre las actividades, ligas, campeonatos y estadios se actualiz
 
 ---
 
+## PHP
+
+### Explicación del código PHP
+
+Este archivo PHP actúa como un servidor de *Server-Sent Events* (SSE) que envía datos dinámicamente a los clientes conectados.
+
+1. **Encabezados HTTP**:
+   - `header('Content-Type: text/event-stream')`: Establece el tipo de contenido a "event-stream", lo que indica que se enviarán eventos a través de SSE.
+   - `header('Cache-Control: no-cache')`: Deshabilita la caché del navegador para asegurar que los clientes siempre reciban los datos.
+
+2. **Generación de datos simulados**:
+   - Se crea un array `$data` con información de varios equipos, donde cada equipo tiene un número aleatorio de victorias (`wins`) y derrotas (`losses`) generadas por la función `rand()`.
+
+3. **Envío de los datos al cliente**:
+   - `echo "data: " . json_encode($data) . "\n\n";`: Convierte el array de datos en un formato JSON y lo envía al cliente precedido de la etiqueta `data:`. El formato SSE requiere que los eventos se envíen en esta estructura específica.
+   
+4. **Flush de datos**:
+   - `flush();`: Envía todos los datos del buffer de salida al cliente, asegurando que este reciba la información inmediatamente.
+
+Este script se ejecuta en un servidor privado, en caso de fallo en el src del proyecto se encuenta el .php para poder alojarlo.
+
+Aquí tienes una versión mejorada para el README:
+
+### **Errores Comunes**:
+
+1. **Conexión a través de Eduroam**:
+   - Al utilizar la red Eduroam, es posible que se produzcan errores de conexión, ya que dicha red puede bloquear el acceso a servidores no reconocidos o dominios desconocidos. Esto puede impedir el correcto funcionamiento del acceso al archivo PHP necesario para Server-Sent Events (SSE).
+
+2. **Errores de Conexión con SSE**:
+   - En algunas ocasiones, la página puede mostrar un mensaje de "Error de conexión con SSE", aunque el contenido generado por el archivo PHP se muestre correctamente. Esto puede deberse a problemas temporales en la comunicación o en la configuración de SSE.
+
+---
+
 ## Uso
 
 1. **Explora las actividades y carreras**: Sigue en tiempo real los eventos de Rolling Rivals.
