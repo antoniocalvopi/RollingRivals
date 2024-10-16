@@ -86,7 +86,7 @@ La información sobre las actividades, ligas, campeonatos y estadios se actualiz
 
 1. Clona el repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu-usuario/rolling-rivals.git
+   git clone https://github.com/antoniocalvopi/RollingRivals
    ```
 
 2. Asegúrate de tener un servidor local (Apache, XAMPP, etc.) corriendo para servir el archivo `sse.php`, necesario para las actualizaciones en tiempo real.
