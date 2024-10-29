@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.left {
+    justify-content: left;
+}
+
+.right {
+    justify-content: right;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+.semi-rounded {
+    border-radius: 10px;
+}
+
+.marpad {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.margin {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.margin5-bot {
+    margin-bottom: 5px;
+}

@@ -8,60 +8,63 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/gallery.css">
     <link rel="stylesheet" href="/css/download.css">
+    <script type="module" src="/js/fetch.js"></script>
     <title>Rolling Rivals</title>
 </head>
 
 <body>
     <div id="header"></div>
-    <!--Banner / Play the game-->
-    <section class="game_banner">
-        <div class="container vertical center">
+    <!-- Banner / Play the game -->
+    <section class="cs-game-banner">
+        <div class="cs-container vertical center">
+            <p>Welcome to</p>
             <h1>Rolling Rivals!</h1>
             <br>
-            <a class="btn3" href="">Play</a>
+            <a class="cs-btn-play" href="">Play</a>
         </div>
-        <img src="img/banner.png" alt="">
+        <img class="cs-banner-image" src="img/banner.png" alt="">
     </section>
-    <!-- SECCIÓN DE CLASIFICACIÓN POR LIGAS -->
-    <section class="clasificacion-ligas rounded marpad margin">
-        <h3>Clasificación por Ligas</h3>
-        <div class="liga">
-            <h4>Liga 1</h4>
-            <table>
+
+    <!-- Sección de Clasificación por Ligas -->
+    <section class="cs-clasificacion-ligas rounded marpad margin">
+        <h3 class="cs-section-title">Clasificación por Ligas</h3>
+        <div class="cs-liga">
+            <h4 class="cs-liga-title">Liga 1</h4>
+            <table class="cs-liga-table">
                 <thead>
                     <tr>
-                        <th>Posición</th>
-                        <th>Equipo</th>
-                        <th>Partidos Jugados</th>
-                        <th>Puntos</th>
+                        <th class="cs-table-header">Posición</th>
+                        <th class="cs-table-header">Equipo</th>
+                        <th class="cs-table-header">Partidos Jugados</th>
+                        <th class="cs-table-header">Puntos</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="cs-table-row">
                         <td>1</td>
                         <td>Equipo A</td>
                         <td>10</td>
                         <td>25</td>
                     </tr>
-                    <tr>
+                    <tr class="cs-table-row">
                         <td>2</td>
                         <td>Equipo B</td>
                         <td>10</td>
                         <td>22</td>
                     </tr>
-                    <tr>
+                    <tr class="cs-table-row">
                         <td>3</td>
                         <td>Equipo C</td>
                         <td>10</td>
                         <td>20</td>
                     </tr>
-                    <tr>
+                    <tr class="cs-table-row">
                         <td>4</td>
                         <td>Equipo D</td>
                         <td>10</td>
                         <td>18</td>
                     </tr>
-                    <tr>
+                    <tr class="cs-table-row">
                         <td>5</td>
                         <td>Equipo E</td>
                         <td>10</td>
@@ -70,40 +73,37 @@
                 </tbody>
             </table>
         </div>
-        <div class="btn2"><a href="pages/actividades.html#seccion_liga">view more</a></div>
+        <div class="cs-btn-view-more"><a href="pages/actividades.html#seccion_liga">view more</a></div>
     </section>
-    <!-- SECCIÓN DE GALERÍA DE IMÁGENES -->
-    <section class="galeria marpad margin">
-        <div class="title">
-            <h3>Galería de Imágenes</h3>
-            <p style="color: #7E8087; padding-top: 5px;">Take a look at what's new right now.</p>
-        </div>
-        <div class="galeria-contenedor">
-            <div class="galeria-item">
-                <img class="rounded" src="img/image01.jpeg" alt="Descripción de la imagen 2">
-            </div>
-            <div class="galeria-item">
-                <img class="rounded" src="img/image02.jpeg" alt="Descripción de la imagen 3">
-            </div>
-            <div class="galeria-item">
-                <img class="rounded" src="img/image02.jpeg" alt="Descripción de la imagen 3">
-            </div>
-        </div>
-    </section>
-    <!-- SECCIÓN DE DESCARGA -->
-    <section class="descarga marpad margin">
-        <h1>Download now</h1>
-        <p>and start racing your marbles to victory!</p>
-        <a href="" class="boton-descarga" download>Dowload</a>
-    </section>
-    <div id="footer"></div>
 
-    <script type="module">
-        import { loadHtml } from '/js/fetch.js';
-        loadHtml('/modules/header.html', 'header');
-        loadHtml('/modules/footer.html', 'footer');
-    </script>
-    <script src="/js/contador.js"></script>
+    <!-- Sección de Galería de Imágenes -->
+    <section class="cs-galeria marpad margin">
+        <div class="cs-title">
+            <h3 class="cs-gallery-title">Galería de Imágenes</h3>
+            <p class="cs-gallery-description" style="color: #7E8087;">Take a look at what's new right
+                now.</p>
+        </div>
+        <div class="cs-galeria-container">
+            <div class="cs-galeria-item">
+                <img class="cs-galeria-image rounded" src="img/image01.jpeg" alt="Descripción de la imagen 1">
+            </div>
+            <div class="cs-galeria-item">
+                <img class="cs-galeria-image rounded" src="img/image02.jpeg" alt="Descripción de la imagen 2">
+            </div>
+            <div class="cs-galeria-item">
+                <img class="cs-galeria-image rounded" src="img/image02.jpeg" alt="Descripción de la imagen 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Descarga -->
+    <section class="cs-descarga marpad margin">
+        <h1 class="cs-download-title">Download now</h1>
+        <p class="cs-download-description">and start racing your marbles to victory!</p>
+        <a href="" class="cs-boton-descarga" download>Download</a>
+    </section>
+
+    <div id="footer"></div>
 </body>
 
 </html>

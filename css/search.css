@@ -1,0 +1,81 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
+
+/* Sección Buscador */
+.cs-search-section {
+    margin: 0;
+    padding: 0;
+}
+
+.cs-search-section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #0E1015;
+    margin-top: 12rem;
+}
+
+/* Input del buscador */
+.search-input {
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #484B51;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.search-input::placeholder {
+    color: #dcdcdc;
+    font-style: italic;
+}
+
+/* Botones */
+.search-btn, .filter-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.search-btn {
+    background-color: #ff4757;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #e33e4b;
+}
+
+.filter-btn {
+    background-color: white;
+    color: #484B51;
+    border: 2px solid #dcdcdc;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #dcdcdc;
+    color: black;
+}
+
+/* Iconos en los botones */
+.search-btn::before {
+    display: inline-block;
+}
+
+.filter-btn::before {
+    display: inline-block;
+}

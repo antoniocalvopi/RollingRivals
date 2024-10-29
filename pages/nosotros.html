@@ -1,153 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <script type="module" src="/js/fetch.js"></script>
     <title>About Us</title>
 </head>
+
 <body>
     <!--Header-->
-    <header>
-        <div class="logo">
-            <a href="../index.html"><img src="../img/logo.png" style="width: 30px; height: 30px;" alt="logo">RR</a>
+    <div id="header"></div>
+    <!-- About Us Section -->
+    <section id="cs-about-section">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <h3>Bienvenidos a Rolling Rivals, el destino definitivo para todos los amantes del marble racing</h3>
+            <p>Somos un grupo apasionado por las carreras de canicas, un deporte único que combina emoción, estrategia y
+                pura diversión. Lo que comenzó como un simple pasatiempo ha evolucionado en una comunidad global donde
+                canicas de todos los colores, tamaños y estilos compiten por la gloria.</p>
+            <a class="cs-btn-play ">Play</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/actividades.html">Actividades</a>
-                    <ul>
-                        <li><a href="../pages/liga.html">Ligas</a></li>
-                        <li><a href="../pages/campeonato.html">Campeonato</a></li>
-                        <li><a href="../pages/estadios.html">Estadios</a></li>  
-                    </ul>
-                </li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li> 
-                <li><a href="../pages/download.html">Download</a></li>
-                <li><a href="../pages/shop.html">Tienda</a></li>
-                <li><a href="../pages/gallery.html">Galería</a></li>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                
-            </ul>
-        </nav>
-    </header>
-    <!--About Us-->    
-    <section>
-        <h1>About Us</h1>
-        <h3>Bienvenidos a Rolling Rivals, el destino definitivo para todos los amantes del marble racing</h3>
-        <p>Somos un grupo apasionado por las carreras de canicas, un deporte único que combina emoción, estrategia y pura diversión. Lo que comenzó como un simple pasatiempo ha evolucionado en una comunidad global donde canicas de todos los colores, tamaños y estilos compiten por la gloria.</p>
-        <img src="../img/nosotros1.jpeg" alt="imagen sobre el juego">
-        <button>Play</button>
+        <div class="white-square">
+            <img src="../img/nosotros1.jpeg" alt="Imagen 1" class="image-bottom-left">
+            <img src="../img/nosotros2.jpeg" alt="Imagen 2" class="image-top-right">
+        </div>
     </section>
 
-    <!--Nuestra Mision-->
-    <section>
-        <h1>Nuestra Misión</h1>
-        <img src="../img/nosotros2.jpeg" alt="imagen sobre la mision">
-        <p>En Rolling Rivals, nuestra misión es llevar la emoción del Marble Racing a todo el mundo. Queremos que te sumerjas en este apasionante universo, donde cada curva, salto y línea de meta es un momento para recordar. Nos dedicamos a crear contenido que te mantenga al filo de tu asiento, ya seas un espectador casual o un fanático acérrimo.</p>        
+    <!-- Nuestra Misión -->
+    <section id="cs-mission-section">
+        <h2>Nuestra Misión</h2>
+        <div class="mission-content">
+            <img src="../img/nosotros2.jpeg" alt="imagen sobre la misión">
+            <p>En Rolling Rivals, nuestra misión es llevar la emoción del Marble Racing a todo el mundo. Queremos que te
+                sumerjas en este apasionante universo, donde cada curva, salto y línea de meta es un momento para
+                recordar. Nos dedicamos a crear contenido que te mantenga al filo de tu asiento, ya seas un espectador
+                casual o un fanático acérrimo.</p>
+        </div>
     </section>
 
-    <!--Nuestro equipo-->
-    <section>
+    <!-- Nuestro Equipo -->
+    <section id="cs-team-section">
         <h2>Nuestro Equipo</h2>
-        <div class="equipo-container">
-            <div class="miembro">
-                <img src="../img/equipo1.jpeg" alt="imagen de miembro">
-                <h3>Name</h3>
-                <p>Descrip.</p>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="../img/equipo1.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
             </div>
-
-            <div class="miembro">
-                <img src="../img/equipo2.jpeg" alt="imagen de miembro">
-                <h3>Name</h3>
-                <p>Descrip.</p>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
             </div>
         </div>
     </section>
-    
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-logo">
-        <img src="../img/logo.png" alt="Logo" class="footer-logo-img">
-        <a href="" class="boton-descarga" download>Download button</a>
-        <p>Antonio Calvo Picón</p>
-        <div class="redes-sociales">
-            <a href="https://facebook.com" class="social-icon" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" class="social-icon" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" class="social-icon" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>        
-    </div>
 
-    <div class="footer-web-pages">
-        <h4>WEB PAGES</h4>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/nosotros.html">Nosotros</a></li>
-            <li><a href="../pages/actividades.html">Actividades</a></li>
-            <li><a href="../pages/actividades.html#seccion_liga">Liga</a></li>
-            <li><a href="../pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
-            <li><a href="../pages/actividades.html#seccion_estadios">Estadios</a></li>
-            <li><a href="../pages/shop.html">Tienda</a></li>
-            <li><a href="../pages/gallery.html">Galería</a></li>
-            <li><a href="../pages/download.html">Download</a></li>
-            <li><a href="../pages/contact.html">Contacto</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-redes">
-        <h4>REDES</h4>
-        <ul>
-            <li>
-                <a href="https://facebook.com" class="social-icon" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-           <li>
-                <a href="https://twitter.com" class="social-icon" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-           </li>
-            <li>
-                <a href="https://instagram.com" class="social-icon" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com" class="social-icon" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://discord.com" class="social-icon" target="_blank">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-desarrollador">
-        <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
-        <ul>
-            <li>Developer</li>
-            <li>DyPW</li>
-            <li>2024 - 2025</li>
-            <li>Práctica DyPW</li>
-        </ul>
-    </div>
-
-    <div class="visitas">
-        <div class="counter">
-            Visitaste la página:: <span id="localCount">0</span>
-        </div>
-    </div>
-    <!-- Funcionamiento contador local -->
-    <script src="../js/contador.js"></script>
-</footer>
+    <!-- FOOTER -->
+    <div id="footer"></div>
 </body>
 </html>

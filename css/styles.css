@@ -1,3 +1,6 @@
+@import url(assets.css);
+@import url(colors.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -27,146 +30,113 @@ section a {
     margin-bottom: 10px;
 }
 
-section img {
-    width: 100%;
-    height: auto;
+
+/* Banner */
+.cs-game-banner {
+    margin: 0; 
+    padding: 0;
 }
 
-section.game_banner div {
+.cs-game-banner div {
     position: absolute;
-    bottom: 20%; 
+    bottom: 10%; 
     left: 50%; 
     transform: translateX(-50%); 
 }
 
-section.game_banner a {
+.cs-game-banner .cs-banner-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.cs-game-banner a {
     width: 40%;
 }
 
-section.game_banner h1 {
-    font-size: 6em;
+.cs-btn-play {
+    box-shadow: 0px 0px 10px #ff6b81;
+    border: 1px solid #ff6b81;
+    background-color: #ff4757;
+    animation: clickanimation 0.3s;
 }
 
-section.game_banner h1::selection {
+.cs-btn-play:hover {
+    background-color: #aa303a;
+}
+
+.cs-game-banner h1 {
+    padding: 0.2rem;
+    font-size: 4rem;
+}
+
+.cs-game-banner h1::selection {
     user-select: none;
 }
 
-section.game_banner h1:hover {
+.cs-game-banner h1:hover {
+    cursor: default;
+}
+
+.cs-game-banner p {
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.cs-game-banner p::selection {
+    user-select: none;
+}
+
+.cs-game-banner p:hover {
     cursor: default;
 }
 
 
 /* Clasificación por Ligas */
-.clasificacion-ligas {
+.cs-clasificacion-ligas {
     background-color: #1c1c1c;
     border: 1px solid #ffffff52;
 }
 
-.clasificacion-ligas h3 {
+.cs-clasificacion-ligas h3 {
     padding-top: 20px;
 }
 
-.clasificacion-ligas h3, h4 {
+.cs-clasificacion-ligas h3, h4 {
     padding-left: 20px;
     text-align: left;
     margin-bottom: 15px;
 }
 
-.clasificacion-ligas h3{
+.cs-clasificacion-ligas h3 {
     font-size: 24px;
     color: #fff;
 }
 
-.clasificacion-ligas table {
+.cs-clasificacion-ligas table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.clasificacion-ligas th, 
-.clasificacion-ligas td {
+.cs-clasificacion-ligas th, 
+.cs-clasificacion-ligas td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #444;
 }
 
-.clasificacion-ligas th {
+.cs-clasificacion-ligas th {
     background-color: #2e2e2e;
 }
 
-.clasificacion-ligas tbody tr:hover {
+.cs-clasificacion-ligas tbody tr:hover {
+    border-radius: 25px;
     background-color: #444;
-    box-shadow: 0px 0px 10px#666;
+    box-shadow: 0px 0px 10px #666;
     border: 1px solid #666;
 }
 
-
-
-
-
-
-
-.container {
-    display: flex;
-}
-
-.center {
-    align-items: center;
-}
-
-.left {
-    justify-content: left;
-}
-
-.right {
-    justify-content: right;
-}
-
-.vertical {
-    flex-direction: column;
-}
-
-.horizontal {
-    flex-direction: row;
-}
-
-.rounded {
-    border-radius: 25px;
-}
-
-.semi-rounded {
-    border-radius: 10px;
-}
-
-.marpad {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.margin {
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.margin5-bot {
-    margin-bottom: 5px;
-}
-
-
-.boton-descarga {
-    display: inline-block;
-    padding: 15px;
-    background-color: #ff4757;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    width: auto;
-}
-
-.boton-descarga:hover {
-    background-color: #ff6b81;
-}
-
-.btn2 a {
+.cs-btn-view-more a {
     display: block;
     text-align: center;
     margin: 20px auto;
@@ -178,7 +148,7 @@ section.game_banner h1:hover {
     text-decoration: none;
 }
 
-.btn2 a:hover {
+.cs-btn-view-more a:hover {
     background-color: #ff6b81;
 }
 
@@ -186,21 +156,41 @@ section.game_banner h1:hover {
     0% {
         transform: scale(1);
         background-color: #aa303a;
-      }
-      100% {
+    }
+    100% {
         transform: scale(0.9);
         background-color: #aa303a;
-      }
-      
+    }
 }
 
-.btn3 {
-    box-shadow: 0px 0px 10px#ff6b81;
-    border: 1px solid #ff6b81;
-    background-color: #ff4757;
-    animation: clickanimation 0.3s;
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    .cs-game-banner {
+        margin: 0; 
+        padding: 0;
+    }
+    
+    .cs-game-banner p {
+        margin: 3rem;
+        font-size: 1rem;
+    }
+
+    .cs-game-banner h1{
+        margin: 1rem;
+        font-size: 3rem;
+    }
 }
 
-.btn3:hover {
-    background-color: #aa303a;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+   
+}
+
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  
 }

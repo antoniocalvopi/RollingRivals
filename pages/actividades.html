@@ -1,162 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/galeria_estadios.css">
+    <script type="module" src="/js/fetch.js"></script>
     <title>Actividades</title>
 </head>
+
 <body>
+
     <div id="header"></div>
-    
-   <!-- Sección Buscador -->
-    <div class="search-section">
+
+    <!-- Sección Buscador -->
+    <div class="cs-search-section marpad">
         <input type="text" placeholder="Search Ligas, Campeonatos." class="search-input">
-        <button class="search-btn">Go</button>
-        <button class="filter-btn">Filter</button>
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass fa-beat"></i>Go</button>
+        <button class="filter-btn"><i class="fa-solid fa-filter"></i>Filter</button>
     </div>
 
 
-    <!-- Seccion con SSE -->
-    <h1>Equipos de Marble Racing</h1>
-    <div id="team-info"></div>
-    
+    <!-- Sección con SSE -->
+    <section class="cs-clasificacion-ligas rounded marpad margin">
+        <h3>Clasificación Actualizada por SSE</h3>
+        <div class="cs-liga-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Equipo</th>
+                        <th>Partidos Jugados</th>
+                        <th>Victorias</th>
+                        <th>Derrotas</th>
+                    </tr>
+                </thead>
+                <tbody id="team-info" class="cs-table-row">
+                    <!-- Aquí se agregarán los equipos dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+        <div class="cs-table-row">
+            <br>
+        </div>
+    </section>
+
     <script>
-    // Crear conexión con el servidor usando SSE
-    const eventSource = new EventSource('sse.php');
-    
-    // Escuchar eventos enviados desde el servidor
-    eventSource.onmessage = function(event) {
-        const equipos = JSON.parse(event.data);
-        
-        // Actualizar la UI con los datos de los equipos
-        let html = '<ul>';
-        equipos.forEach(equipo => {
-            html += `<li>${equipo.equipo} - Puntos: ${equipo.puntos}</li>`;
-        });
-        html += '</ul>';
-        
-        document.getElementById('team-info').innerHTML = html;
-    };
-    
-    // Manejar errores
-    eventSource.onerror = function(event) {
-        console.error('Error en la conexión SSE:', event);
-    };
+        // Crear conexión con el servidor usando SSE
+        const eventSource = new EventSource('http://83.32.217.29:8300/sse.php');
+
+        // Escuchar eventos enviados desde el servidor
+        eventSource.onmessage = function (event) {
+            const equipos = JSON.parse(event.data);
+
+            // Generar el HTML para actualizar la tabla
+            let html = '';
+            equipos.forEach((equipo, index) => {
+                const partidosJugados = equipo.wins + equipo.losses;
+                html += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${equipo.team}</td>
+                <td>${partidosJugados}</td>
+                <td>${equipo.wins}</td>
+                <td>${equipo.losses}</td>
+            </tr>
+        `;
+            });
+
+            // Insertar el HTML en el tbody de la tabla
+            document.getElementById('team-info').innerHTML = html;
+        };
+
+        // Manejar errores
+        eventSource.onerror = function (event) {
+            console.error('Error en la conexión SSE:', event);
+        };
     </script>
-    
-
-    <!--Seccion Liga-->
-    <div id="seccion_liga" class="league-section">
-        <h2>Clasificación por liga</h2>
-        <table class="league-table">
-            <thead>
-                <tr>
-                    <th>Liga 1</th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Avg Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 1"> Equipo 1</td>
-                    <td>92%</td>
-                    <td>29</td>
-                    <td>234</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 2"> Equipo 2</td>
-                    <td>31%</td>
-                    <td>17</td>
-                    <td>158</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 3"> Equipo 3</td>
-                    <td>84%</td>
-                    <td>07</td>
-                    <td>484</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 4"> Equipo 4</td>
-                    <td>54.61%</td>
-                    <td>32</td>
-                    <td>352</td>
-                </tr>
-            </tbody>
-        </table>
-        <button class="view-stats-btn">View Statistics</button>
-        <button class="see-more-btn">See More</button>
-    </div>
-
-    <!--Seccion Campeonatos-->
-    <div id="seccion_campeonatos" class="championship-section">
-        <h2>Clasificación por Campeonato</h2>
-        <table class="championship-table">
-            <thead>
-                <tr>
-                    <th>Liga</th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Avg Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 1"> Equipo 1</td>
-                    <td>92%</td>
-                    <td>29</td>
-                    <td>234</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 2"> Equipo 2</td>
-                    <td>31%</td>
-                    <td>17</td>
-                    <td>158</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 3"> Equipo 3</td>
-                    <td>84%</td>
-                    <td>07</td>
-                    <td>484</td>
-                </tr>
-                <tr>
-                    <td><img src="/img/team.webp" style="width: 30px; height: 30px;" alt="Team 4"> Equipo 4</td>
-                    <td>54.61%</td>
-                    <td>32</td>
-                    <td>352</td>
-                </tr>
-            </tbody>
-        </table>
-        <button class="view-stats-btn">View Statistics</button>
-        <button class="see-more-btn">See More</button>
-    </div>
 
     <!-- Sección Estadios -->
-    <div id="seccion_estadios" class="stadiums-section">
+    <div id="seccion_estadios" class="cs-seccion-stadium margin marpad">
         <h2>Estadios</h2>
-        <div class="stadium-grid">
-            <div class="stadium-card">
+        <div class="cs-stadium-grid">
+            <div class="cs-stadium-card">
                 <img src="/img/stadio1.jpeg" alt="Estadio 1">
-                <h4>Nombre Estadio</h4>
-                <p>Localización</p>
+                <div class="cs-stadium-info">
+                    <h4>Nombre Estadio</h4>
+                    <p>Capacidad: 70,000</p>
+                    <p>Ubicación: Ciudad Z</p>
+                </div>
             </div>
-            <div class="stadium-card">
+            <div class="cs-stadium-card">
                 <img src="/img/stadio2.jpeg" alt="Estadio 2">
-                <h4>Nombre Estadio</h4>
-                <p>Localización</p>
+                <div class="cs-stadium-info">
+                    <h4>Nombre Estadio</h4>
+                    <p>Capacidad: 70,000</p>
+                    <p>Ubicación: Ciudad Z</p>
+                </div>
             </div>
+            <a href="/pages/estadios.html" class="cs-stadium-button">See more..</a>
         </div>
-        <button class="see-more-btn">See More</button>
     </div>
 
-   <div id="footer"></div>
-   <script type="module">
-    import { loadHtml } from '/js/fetch.js';
-    loadHtml('/modules/header.html', 'header');
-    loadHtml('/modules/footer.html', 'footer');
-</script>
+
+    <div id="footer"></div>
 </body>
+
 </html>
