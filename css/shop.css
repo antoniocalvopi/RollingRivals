@@ -1,3 +1,6 @@
+.main-seccion {
+    margin-top: 12rem;
+}
 .container {
     display: flex;
     flex-wrap: wrap;

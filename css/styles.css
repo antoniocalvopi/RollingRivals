@@ -163,25 +163,9 @@ section a {
     }
 }
 
-/*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
-/* Mobile - 1023px */
-@media only screen and (max-width: 63.9375rem) {
-    .cs-game-banner {
-        margin: 0; 
-        padding: 0;
-    }
-    
-    .cs-game-banner p {
-        margin: 3rem;
-        font-size: 1rem;
-    }
+/* Mobile - 430 */
+@media only screen and (max-width: 768px) {
 
-    .cs-game-banner h1{
-        margin: 1rem;
-        font-size: 3rem;
-    }
 }
 
 /* Tablet - 768px */

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/search.css">
     <link rel="stylesheet" href="/css/galeria_estadios.css">
+    <link rel="stylesheet" href="/css/modal.css">
     <script type="module" src="/js/fetch.js"></script>
     <title>Actividades</title>
 </head>
@@ -19,14 +20,40 @@
     <!-- Sección Buscador -->
     <div class="cs-search-section marpad">
         <input type="text" placeholder="Search Ligas, Campeonatos." class="search-input">
-        <button class="search-btn"><i class="fa-solid fa-magnifying-glass fa-beat"></i>Go</button>
         <button class="filter-btn"><i class="fa-solid fa-filter"></i>Filter</button>
     </div>
 
 
-    <!-- Sección con SSE -->
+    <!-- Modal para mostrar resultados -->
+<div id="searchResultsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        
+        <!-- Mensaje para indicar que no se encontraron resultados -->
+        <p id="no-results-message" style="display: none;">No se encontraron coincidencias para la búsqueda.</p>
+        
+        <!-- Tabla de resultados -->
+        <table id="results-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Equipo</th>
+                    <th>Partidos Jugados</th>
+                    <th>Victorias</th>
+                    <th>Derrotas</th>
+                </tr>
+            </thead>
+            <tbody id="modal-team-info">
+                <!-- Los resultados de búsqueda se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <!-- Sección con SSE - Ligas -->
     <section class="cs-clasificacion-ligas rounded marpad margin">
-        <h3>Clasificación Actualizada por SSE</h3>
+        <h3>Clasificación Ligas</h3>
         <div class="cs-liga-table">
             <table>
                 <thead>
@@ -39,7 +66,6 @@
                     </tr>
                 </thead>
                 <tbody id="team-info" class="cs-table-row">
-                    <!-- Aquí se agregarán los equipos dinámicamente -->
                 </tbody>
             </table>
         </div>
@@ -47,6 +73,30 @@
             <br>
         </div>
     </section>
+
+    <!-- Sección con SSE  Campeonatos-->
+    <section class="cs-clasificacion-ligas rounded marpad margin">
+        <h3>Clasificación Campeonatos</h3>
+        <div class="cs-liga-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Equipo</th>
+                        <th>Partidos Jugados</th>
+                        <th>Victorias</th>
+                        <th>Derrotas</th>
+                    </tr>
+                </thead>
+                <tbody id="team-info" class="cs-table-row">
+                </tbody>
+            </table>
+        </div>
+        <div class="cs-table-row">
+            <br>
+        </div>
+    </section>
+
 
     <script>
         // Crear conexión con el servidor usando SSE
@@ -107,6 +157,8 @@
 
 
     <div id="footer"></div>
+    <script src="/js/search.js"></script>
+    <script src="/js/header.js"></script>
 </body>
 
 </html>

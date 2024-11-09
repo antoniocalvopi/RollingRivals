@@ -4,177 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <script type="module" src="/js/fetch.js"></script>
     <title>Shop</title>
 </head>
 <body>
     <!--Header-->
-    <header>
-        <div class="logo">
-            <a href="../index.html"><img src="../img/logo.png" style="width: 30px; height: 30px;" alt="logo">RR</a>
+    <div id="header"></div>
+    
+    <!--Items -->  
+    <div class="main-seccion">
+        <!-- Sección Buscador -->
+        <div class="cs-search-section marpad">
+            <input type="text" placeholder="Search by Name." class="search-input">
+            <button class="filter-btn"><i class="fa-solid fa-filter"></i>Filter</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/actividades.html">Actividades</a>
-                    <ul>
-                        <li><a href="../pages/liga.html">Ligas</a></li>
-                        <li><a href="../pages/campeonato.html">Campeonato</a></li>
-                        <li><a href="../pages/estadios.html">Estadios</a></li>  
-                    </ul>
-                </li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li> 
-                <li><a href="../pages/download.html">Download</a></li>
-                <li><a href="shop.html">Tienda</a></li>
-                <li><a href="../pages/gallery.html">Galería</a></li>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                
-            </ul>
-        </nav>
-    </header>
-    <!--Items -->    
-    <h1>Nuestra Tienda</h1>
-    <section id="seccion_tienda">
-        <div class="container">
-            <!-- Producto 1 -->
-            <div class="card">
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p class="price">$160</p>
-                <div class="stars">★★★★★ (88)</div>
+        <section id="seccion_tienda">
+            <div class="container margin">
+                <!-- Producto 3 -->
+                <div class="card">
+                    <span class="badge-discount">-36%</span>
+                    <img src="../img/marble.webp" alt="Producto">
+                    <h4>Producto</h4>
+                    <p><span class="price">$980</span> <span class="discount">$1600</span></p>
+                    <div class="stars">★★★★☆ (75)</div>
+                    <button class="add-to-cart-btn">More Info</button>
+                    <button class="add-to-cart-btn">Buy Now</button>
+                </div>
             </div>
-    
-            <!-- Producto 2 -->
-            <div class="card">
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p class="price">$160</p>
-                <div class="stars">★★★★★ (88)</div>
-            </div>
-    
-            <!-- Producto 3 -->
-            <div class="card">
-                <span class="badge-discount">-36%</span>
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p><span class="price">$980</span> <span class="discount">$1600</span></p>
-                <div class="stars">★★★★☆ (75)</div>
-                <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-    
-            <!-- Producto 4 -->
-            <div class="card">
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p class="price">$160</p>
-                <div class="stars">★★★★★ (88)</div>
-            </div>
-    
-            <!-- Producto 5 -->
-            <div class="card">
-                <span class="badge-discount">-36%</span>
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p><span class="price">$980</span> <span class="discount">$1600</span></p>
-                <div class="stars">★★★★☆ (75)</div>
-                <button class="add-to-cart-btn">Add To Cart</button>
-            </div>
-    
-            <!-- Producto 6 -->
-            <div class="card">
-                <img src="../img/marble.webp" alt="Producto">
-                <h4>Producto</h4>
-                <p class="price">$160</p>
-                <div class="stars">★★★★★ (88)</div>
-            </div>
-        </div>
-    
-        <!-- Botón de ver más -->
-        <button class="see-more-btn">See More</button>
-    </section>
+        
+            <!-- Botón de ver más -->
+            <button class="see-more-btn">See More</button>
+        </section>
+    </div>  
 
     <!-- FOOTER -->
-   <footer class="footer">
-    <div class="footer-logo">
-        <img src="../img/logo.png" alt="Logo" class="footer-logo-img">
-        <a href="" class="boton-descarga" download>Download button</a>
-        <p>Antonio Calvo Picón</p>
-        <div class="redes-sociales">
-            <a href="https://facebook.com" class="social-icon" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" class="social-icon" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" class="social-icon" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>        
-    </div>
-
-    <div class="footer-web-pages">
-        <h4>WEB PAGES</h4>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/nosotros.html">Nosotros</a></li>
-            <li><a href="../pages/actividades.html">Actividades</a></li>
-            <li><a href="../pages/actividades.html#seccion_liga">Liga</a></li>
-            <li><a href="../pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
-            <li><a href="../pages/actividades.html#seccion_estadios">Estadios</a></li>
-            <li><a href="../pages/shop.html">Tienda</a></li>
-            <li><a href="../pages/gallery.html">Galería</a></li>
-            <li><a href="../pages/download.html">Download</a></li>
-            <li><a href="../pages/contact.html">Contacto</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-redes">
-        <h4>REDES</h4>
-        <ul>
-            <li>
-                <a href="https://facebook.com" class="social-icon" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-           <li>
-                <a href="https://twitter.com" class="social-icon" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-           </li>
-            <li>
-                <a href="https://instagram.com" class="social-icon" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com" class="social-icon" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://discord.com" class="social-icon" target="_blank">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-desarrollador">
-        <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
-        <ul>
-            <li>Developer</li>
-            <li>DyPW</li>
-            <li>2024 - 2025</li>
-            <li>Práctica DyPW</li>
-        </ul>
-    </div>
-
-    <div class="visitas">
-        <div class="counter">
-            Visitaste la página:: <span id="localCount">0</span>
-        </div>
-    </div>
-    <!-- Funcionamiento contador local -->
-    <script src="../js/contador.js"></script>
-</footer>
+    <div id="footer"></div>
 </body>
 </html>

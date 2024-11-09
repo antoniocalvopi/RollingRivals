@@ -45,5 +45,6 @@
 }
 
 .cs-galeria-item:hover img {
+    cursor: pointer;
     transform: scale(1.2); 
 }
