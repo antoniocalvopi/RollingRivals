@@ -49,13 +49,32 @@
     transform: scale(1.2); 
 }
 
+/* móvil */
+@media screen and (max-width: 768px) {
+    .cs-section {
+        padding: 10px;
+    }
 
-/* Mobile - 430 */
-@media only screen and (max-width: 768px) {
+    .cs-gallery-title {
+        font-size: 1.2rem;
+    }
 
-}
+    .cs-gallery-description {
+        font-size: 0.8rem;
+    }
 
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-   
+    .cs-galeria-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; 
+    }
+
+    .cs-galeria-item {
+        max-width: 100%; 
+        padding: 5px;
+    }
+
+    .cs-galeria-item:hover img {
+        transform: scale(1.1);
+    }
 }

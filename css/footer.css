@@ -1,5 +1,4 @@
 @import url(/css/assets.css);
-@import url(/css/download.css);
 
 /* Footer */
 footer {
@@ -89,42 +88,42 @@ footer {
     font-size: 14px;
 }
 
-/* Responsividad para tablet */
-@media (max-width: 1024px) {
+/* movíl */
+@media (max-width: 600px) {
     footer {
-        padding: 30px;
-        flex-direction: column;
-        align-items: center;
+        padding: 15px;
+        gap: 10px; 
     }
 
     .footer-logo-img {
-        width: 25%;
-        margin-bottom: 20px;
+        width: 25px;
+        height: auto; 
     }
 
-    .footer-web-pages,
-    .footer-redes,
-    .footer-desarrollador {
-        text-align: center;
-        width: 100%;
+    .cs-boton-descarga {
+        width: 65px;
+        height: auto;
+        font-size: 15px;
+    }
+
+    footer p{
+        font-size: 15px;
+    }
+
+    div.container.vertical.left {
+        max-height: 125px;
+    }
+
+    .social-icon {
+        font-size: 14px; 
+    }
+
+    .footer-web-pages ul li a {
+        font-size: 12px;
     }
 
     .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .footer-bottom p,
-    .footer-bottom a {
-        padding: 0;
-    }
-}
-
-/* Responsividad para móviles */
-@media (max-width: 600px) {
-    footer {
-        padding: 20px;
-        gap: 10px;
+        gap: 8px;
+        margin-top: 10px;
     }
 }

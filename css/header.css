@@ -37,10 +37,6 @@
   color: var(--primary);
 }
 
-
-/*-- -------------------------- -->
-  <---     Navigation Dropdown    -->
-  <--- -------------------------- -*/
 /* Mobile - 425px */
 @media only screen and (max-width: 425px) {
   #cs-navigation .cs-li {
@@ -108,9 +104,6 @@
   }
 }
 
-/*-- -------------------------- -->
-<---     Mobile Navigation      -->
-<--- -------------------------- -*/
 /* Tablet - 1023px */
 @media only screen and (max-width: 1023px) {
   body.cs-open {
@@ -134,7 +127,6 @@
   #cs-navigation {
     width: 95%;
     max-width: 971px;
-    /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem);
@@ -149,7 +141,6 @@
   }
 
   #cs-navigation:before {
-    /* background color */
     content: "";
     width: 100%;
     height: 100%;
@@ -209,7 +200,6 @@
   #cs-navigation .cs-logo img {
     width: 100%;
     height: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
 
@@ -522,7 +512,6 @@
     text-decoration: none;
     white-space: nowrap;
     width: 100%;
-    /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: 0.75rem;
     color: var(--headerColor);
@@ -541,9 +530,6 @@
   }
 }
 
-/*-- -------------------------- -->
-  <---     Desktop Navigation     -->
-  <--- -------------------------- -*/
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 1024px) {
   body.scroll #cs-navigation {
@@ -579,7 +565,6 @@
     width: 100%;
     max-width: 90rem;
     margin: auto;
-    /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: 0 1.5rem;
     display: flex;
@@ -596,7 +581,6 @@
     width: 18.4%;
     max-width: 21.875rem;
     height: 2rem;
-    /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
     padding: 0;
     display: flex;
@@ -610,44 +594,31 @@
   #cs-navigation .cs-logo img {
     width: auto;
     height: 100%;
-    /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
 
   .cs-user-group a {
     font-size: 1.125rem;
-    /* Ajusta el tamaño de la fuente para hacerla más visible */
     color: var(--headerColor);
-    /* Utiliza el color del header definido en las variables */
     font-weight: 700;
-    /* Hace que el texto sea más negrita */
     text-transform: uppercase;
-    /* Convierte el texto a mayúsculas */
     text-decoration: none;
-    /* Remueve subrayado del enlace */
     background-color: var(--secondary);
-    /* Fondo color rojo (según la variable definida) */
     padding: 0.5rem 1.5rem;
-    /* Ajusta el espaciado interno del enlace */
     border-radius: 0.5rem;
-    /* Bordes redondeados */
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Transiciones suaves al interactuar */
   }
 
   .cs-user-group a:hover {
     cursor: pointer;
     background-color: var(--secondaryLight);
-    /* Cambia a un color más claro en hover */
     color: var(--primary);
-    /* Cambia el color del texto en hover */
   }
 
   #cs-navigation .cs-ul-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
-    /* absolutely positioned to be dead center */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -672,7 +643,6 @@
     padding: 0;
     display: flex;
     align-items: center;
-    /* prevent flexbox from squishing it */
     flex: none;
   }
 
