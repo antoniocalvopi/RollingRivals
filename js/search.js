@@ -1,3 +1,4 @@
+// Evento para buscar al presionar 'Enter' en el campo de búsqueda
 document.querySelector('.search-input').addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         const searchText = this.value.toLowerCase();
@@ -5,11 +6,13 @@ document.querySelector('.search-input').addEventListener('keypress', function (e
     }
 });
 
-/*document.querySelector('.search-input').addEventListener('input', function () {
-    const searchText = this.value.toLowerCase();
+// Evento para buscar al hacer clic en el botón de búsqueda
+document.querySelector('.search-btn').addEventListener('click', function () {
+    const searchText = document.querySelector('.search-input').value.toLowerCase();
     filterTable(searchText);
-});*/
+});
 
+// Función para filtrar la tabla según el texto de búsqueda
 function filterTable(searchText) {
     const rows = document.querySelectorAll('#team-info tr');
     const modalContent = document.getElementById('modal-team-info');

@@ -6,13 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <script type="module" src="/js/fetch.js"></script>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/header.js" defer></script>
+    <script src="/js/contador.js" defer></script>
     <title>Campeonatos</title>
 </head>
 
 <body>
-    <!--Header-->
-    <div id="header"></div>
+    <!-- Header -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Logo de navegación -->
+            <a href="/index.html" class="cs-logo" aria-label="back to home">
+                <img src="/img/logo.png" style="width: 30px; height: 30px;" alt="logo" aria-hidden="true"
+                    decoding="async">
+                RollingRivals</a>
+            </a>
+
+            <!-- Navegación principal -->
+            <nav class="cs-nav" role="navigation">
+
+                <!-- Botón de menú para móviles -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+
+                <!-- Envoltura del menú -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="/index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li cs-dropdown" tabindex="0">
+                            <span class="cs-li-link">
+                                <a href="/pages/actividades.html" class="cs-li-link">
+                                    Actividades
+                                    <svg class="cs-drop-icon" xmlns="http://www.w3.org/2000/svg" id="Outline"
+                                        viewBox="0 0 24 24" width="15" height="15">
+                                        <path
+                                            d="M6.41,9H17.59a1,1,0,0,1,.7,1.71l-5.58,5.58a1,1,0,0,1-1.42,0L5.71,10.71A1,1,0,0,1,6.41,9Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </span>
+                            <ul class="cs-drop-ul">
+                                <li class="cs-drop-li"><a href="/pages/liga.html"
+                                        class="cs-li-link cs-drop-link">Ligas</a>
+                                </li>
+                                <li class="cs-drop-li"><a href="/pages/campeonato.html"
+                                        class="cs-li-link cs-drop-link">Campeonatos</a></li>
+                                <li class="cs-drop-li"><a href="/pages/estadios.html"
+                                        class="cs-li-link cs-drop-link">Estadios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Más opciones de navegación -->
+                        <li class="cs-li"><a href="/pages/nosotros.html" class="cs-li-link">Nosotros</a></li>
+                        <li class="cs-li"><a href="/pages/download.html" class="cs-li-link">Download</a></li>
+                        <li class="cs-li"><a href="/pages/shop.html" class="cs-li-link">Tienda</a></li>
+                        <li class="cs-li"><a href="/pages/gallery.html" class="cs-li-link">Galería</a></li>
+                        <li class="cs-li"><a href="/pages/contact.html" class="cs-li-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Grupo de usuario -->
+            <div class="cs-user-group">
+                <a href="">Sign In</a>
+            </div>
+        </div>
+    </header>
 
     <!--Seccion Liga-->
     <section class="cs-clasificacion-ligas rounded marpad margin" style=" margin-top: 12rem;">
@@ -72,7 +139,105 @@
     </script>
 
     <!-- FOOTER -->
-    <div id="footer"></div>
+    <footer class="footer">
+
+        <div class="container vertical left">
+
+            <a class="container horizontal center margin5-bot" style="color: white; text-decoration: none;"
+                href="/index.html">
+                <img src="/img/logo.png" alt="Logo" class="footer-logo-img">
+                <p>Rolling Rivals</p>
+            </a>
+            <div>
+                <a href="/pages/download.html" class="cs-boton-descarga semi-rounded margin5-bot">Download</a>
+            </div>
+            <p>Antonio Calvo Picón</p>
+            <div class="redes-sociales margin5-bot">
+                <a href="https://facebook.com" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="footer-web-pages container vertical left">
+            <h4>WEB PAGES</h4>
+            <ul>
+                <li class="margin5-bot"><a href="/index.html">Home</a></li>
+                <li class="margin5-bot"><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html">Actividades</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_liga">Liga</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_estadios">Estadios</a></li>
+                <li class="margin5-bot"><a href="/pages/shop.html">Tienda</a></li>
+                <li class="margin5-bot"><a href="/pages/gallery.html">Galería</a></li>
+                <li class="margin5-bot"><a href="/pages/download.html">Download</a></li>
+                <li class="margin5-bot"><a href="/pages/contact.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-redes container vertical">
+            <h4>REDES</h4>
+            <ul>
+                <li>
+                    <a href="https://facebook.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        <p> facebook</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <p> twitter</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <p> instagram</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <p> tiktok</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <p> discord</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-desarrollador container vertical left">
+            <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
+            <ul>
+                <li class="margin5-bot">Developer</li>
+                <li class="margin5-bot">DyPW</li>
+                <li class="margin5-bot">2024 - 2025</li>
+                <li class="margin5-bot">Práctica DyPW</li>
+            </ul>
+        </div>
+        <div class="visitas container horizontal">
+            <div class="counter">
+                Visitaste la página: <span id="localCount">0</span>
+            </div>
+        </div>
+        <div class="footer-bottom margin5-bot">
+            <p>Made with lots of love</p>
+            <p>English</p>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy policy</a>
+        </div>
     </footer>
 </body>
 
