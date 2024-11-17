@@ -14,6 +14,7 @@
     <script src="/js/search.js" defer></script>
     <script src="/js/header.js" defer></script>
     <script src="/js/contador.js" defer></script>
+    <script src="/js/sse.js" defer></script>
     <title>Actividades</title>
 </head>
 
@@ -143,9 +144,9 @@
         </div>
     </section>
 
-    <!-- Sección con SSE  Campeonatos-->
+    <!-- Sección con SSE - Ligas -->
     <section class="cs-clasificacion-ligas rounded marpad margin">
-        <h3>Clasificación Campeonatos</h3>
+        <h3>Clasificación Ligas</h3>
         <div class="cs-liga-table">
             <table>
                 <thead>
@@ -165,40 +166,6 @@
             <br>
         </div>
     </section>
-
-
-    <script>
-        // Crear conexión con el servidor usando SSE
-        const eventSource = new EventSource('http://83.32.217.29:8300/sse.php');
-
-        // Escuchar eventos enviados desde el servidor
-        eventSource.onmessage = function (event) {
-            const equipos = JSON.parse(event.data);
-
-            // Generar el HTML para actualizar la tabla
-            let html = '';
-            equipos.forEach((equipo, index) => {
-                const partidosJugados = equipo.wins + equipo.losses;
-                html += `
-            <tr>
-                <td>${index + 1}</td>
-                <td>${equipo.team}</td>
-                <td>${partidosJugados}</td>
-                <td>${equipo.wins}</td>
-                <td>${equipo.losses}</td>
-            </tr>
-        `;
-            });
-
-            // Insertar el HTML en el tbody de la tabla
-            document.getElementById('team-info').innerHTML = html;
-        };
-
-        // Manejar errores
-        eventSource.onerror = function (event) {
-            console.error('Error en la conexión SSE:', event);
-        };
-    </script>
 
     <!-- Sección Estadios -->
     <div id="seccion_estadios" class="cs-seccion-stadium margin marpad">
