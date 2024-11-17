@@ -1,3 +1,4 @@
+// REVISAR - NO FUNCIONA CORRECTAMENTE
 const currentPath = window.location.pathname;  // Obtiene la ruta actual
 const menuLinks = document.querySelectorAll('.cs-li-link');  // Selecciona todos los enlaces dentro de los elementos <li> con la clase .cs-li-link
 menuLinks.forEach(link => {

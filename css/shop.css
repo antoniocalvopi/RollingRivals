@@ -1,3 +1,4 @@
+@import url(/css/colors.css);
 .main-seccion {
     margin-top: 12rem;
 }
@@ -15,7 +16,13 @@
     text-align: center;
     position: relative;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 300ms;
 }
+.card:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
 .card img {
     width: 100%;
     height: auto;
@@ -46,7 +53,7 @@
     border-radius: 5px;
     font-size: 12px;
 }
-.add-to-cart-btn {
+.basic-btn {
     background-color: #ff6060;
     color: white;
     padding: 10px;
@@ -54,14 +61,56 @@
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.basic-btn:hover {
+    background-color: #ff4040;
+    transform: scale(1.05);
+}
+
 .see-more-btn {
-    background-color: #ff6060;
-    color: white;
-    padding: 10px 20px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
-    margin: 20px auto;
-    display: block;
+    background-color: var(--secondary);
+}
+.see-more-btn:hover {
     cursor: pointer;
+    background-color: var(--secondaryLight);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .main-seccion {
+        margin-top: 8rem;
+    }
+    .card {
+        width: 90%; 
+        margin: 0 auto; 
+        padding: 10px;
+    }
+    .card:hover {
+        transform: scale(1.05) translateY(-3px);
+    }
+    .card img {
+        border-radius: 8px;
+    }
+    .card h4 {
+        font-size: 1.1rem;
+    }
+    .card .price {
+        font-size: 1rem;
+    }
+    .card .discount {
+        font-size: 0.9rem; 
+    }
+    .card .stars {
+        font-size: 0.85rem;
+    }
+    .see-more-btn {
+        width: 80%; 
+        margin: 10px auto; 
+        padding: 8px 0;
+    }
 }

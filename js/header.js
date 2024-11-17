@@ -12,14 +12,13 @@ CShamburgerMenu.addEventListener('click', () => {
 });
 
 // dropdown
-
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 const dropdown = document.querySelector('.cs-dropdown');
 const dropdownLink = dropdown.querySelector('.cs-li-link');
 const dropdownMenu = dropdown.querySelector('.cs-drop-ul'); 
 // Abrir o cerrar el dropdown al hacer clic en el enlace ("Actividades")
 dropdownLink.addEventListener('click', function (event) {
-    if (isMobile) {
+    if (isMobile) {z
         event.preventDefault();
         dropdown.classList.toggle('cs-active'); 
         dropdownMenu.classList.toggle('show'); 
