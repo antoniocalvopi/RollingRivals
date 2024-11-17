@@ -4,32 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/gallery_page.css">
+    <script src="/js/contador.js" defer></script>
+    <script src="/js/header.js" defer></script>
     <title>Gallery</title>
 </head>
 <body>
-    <!--Header-->
-    <header>
-        <div class="logo">
-            <a href="../index.html"><img src="../img/logo.png" style="width: 30px; height: 30px;" alt="logo">RR</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/actividades.html">Actividades</a>
-                    <ul>
-                        <li><a href="../pages/liga.html">Ligas</a></li>
-                        <li><a href="../pages/campeonato.html">Campeonato</a></li>
-                        <li><a href="../pages/estadios.html">Estadios</a></li>  
+    <!-- Header -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Logo de navegación -->
+            <a href="/index.html" class="cs-logo" aria-label="back to home">
+                <img src="/img/logo.png" style="width: 30px; height: 30px;" alt="logo" aria-hidden="true"
+                    decoding="async">
+                RollingRivals</a>
+            </a>
+
+            <!-- Navegación principal -->
+            <nav class="cs-nav" role="navigation">
+
+                <!-- Botón de menú para móviles -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+
+                <!-- Envoltura del menú -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="/index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li cs-dropdown" tabindex="0">
+                            <span class="cs-li-link">
+                                <a href="/pages/actividades.html" class="cs-li-link">
+                                    Actividades
+                                    <svg class="cs-drop-icon" xmlns="http://www.w3.org/2000/svg" id="Outline"
+                                        viewBox="0 0 24 24" width="15" height="15">
+                                        <path
+                                            d="M6.41,9H17.59a1,1,0,0,1,.7,1.71l-5.58,5.58a1,1,0,0,1-1.42,0L5.71,10.71A1,1,0,0,1,6.41,9Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </span>
+                            <ul class="cs-drop-ul">
+                                <li class="cs-drop-li"><a href="/pages/liga.html"
+                                        class="cs-li-link cs-drop-link">Ligas</a>
+                                </li>
+                                <li class="cs-drop-li"><a href="/pages/campeonato.html"
+                                        class="cs-li-link cs-drop-link">Campeonatos</a></li>
+                                <li class="cs-drop-li"><a href="/pages/estadios.html"
+                                        class="cs-li-link cs-drop-link">Estadios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Más opciones de navegación -->
+                        <li class="cs-li"><a href="/pages/nosotros.html" class="cs-li-link">Nosotros</a></li>
+                        <li class="cs-li"><a href="/pages/download.html" class="cs-li-link">Download</a></li>
+                        <li class="cs-li"><a href="/pages/shop.html" class="cs-li-link">Tienda</a></li>
+                        <li class="cs-li"><a href="/pages/gallery.html" class="cs-li-link">Galería</a></li>
+                        <li class="cs-li"><a href="/pages/contact.html" class="cs-li-link">Contacto</a></li>
                     </ul>
-                </li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li> 
-                <li><a href="../pages/download.html">Download</a></li>
-                <li><a href="../pages/shop.html">Tienda</a></li>
-                <li><a href="gallery.html">Galería</a></li>
-                <li><a href="../pages/contact.html">Contacto</a></li>
-                
-            </ul>
-        </nav>
+                </div>
+            </nav>
+
+            <!-- Grupo de usuario -->
+            <div class="cs-user-group">
+                <a href="">Sign In</a>
+            </div>
+        </div>
     </header>
     <!--Galeria -->    
     <div class="gallery">
@@ -38,20 +86,34 @@
             <h3>Videos</h3>
             <p>Texto</p>
             <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0sHu99vdz-A?si=XqJNAsl8yvJAHxEJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="details">
+                    <h4>Marble Rally 2024</h4>
+                    <p><span class="tag">2024</span><span class="tag">Rally</span><span class="difficulty pro">Pro</span></p>
+                </div>
+            </div>
+            <div class="gallery-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pu_reSHFW-w?si=8kJU8s8p9n-gxQfy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="details">
-                    <h4>Título del Video 1</h4>
-                    <p><span class="tag">Tag</span><span class="tag">Tag</span><span class="difficulty pro">Pro</span></p>
+                    <h4>Marble Run Course</h4>
+                    <p><span class="tag">Course</span><span class="tag">Marble Racing</span><span class="difficulty pro">Pro</span></p>
                 </div>
             </div>
             <div class="gallery-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pu_reSHFW-w?si=8kJU8s8p9n-gxQfy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="details">
                     <h4>Título del Video 1</h4>
-                    <p><span class="tag">Tag</span><span class="tag">Tag</span><span class="difficulty pro">Pro</span></p>
+                    <p><span class="tag">Liga1</span><span class="tag">Campeonato2</span><span class="difficulty pro">Pro</span></p>
                 </div>
             </div>
-            <button class="view-lineups">View Lineups</button>
+            <div class="gallery-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pu_reSHFW-w?si=8kJU8s8p9n-gxQfy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="details">
+                    <h4>Título del Video 1</h4>
+                    <p><span class="tag">Liga1</span><span class="tag">Campeonato3</span><span class="difficulty pro">Pro</span></p>
+                </div>
+            </div>
+            <button class="view-lineups">View More Videos</button>
         </div>
     
         <!-- Photos Section -->
@@ -72,94 +134,125 @@
                     <p><span class="tag">Tag</span><span class="tag">tag</span><span class="difficulty medium">Medium</span></p>
                 </div>
             </div>
-            <button class="view-lineups">View Lineups</button>
+            <div class="gallery-item">
+                <img src="../img/image02.jpeg" alt="Video Thumbnail">
+                <div class="details">
+                    <h4>Título</h4>
+                    <p><span class="tag">Tag</span><span class="tag">tag</span><span class="difficulty medium">Medium</span></p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../img/image02.jpeg" alt="Video Thumbnail">
+                <div class="details">
+                    <h4>Título</h4>
+                    <p><span class="tag">Tag</span><span class="tag">tag</span><span class="difficulty medium">Medium</span></p>
+                </div>
+            </div>
+            <button class="view-lineups">View More Photos</button>
         </div>
     </div>
-    <button class="see-more">See more</button>
+    <button class="see-more">Load More</button>
    
     <!-- FOOTER -->
-   <footer class="footer">
-    <div class="footer-logo">
-        <img src="../img/logo.png" alt="Logo" class="footer-logo-img">
-        <a href="" class="boton-descarga" download>Download button</a>
-        <p>Antonio Calvo Picón</p>
-        <div class="redes-sociales">
-            <a href="https://facebook.com" class="social-icon" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" class="social-icon" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" class="social-icon" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>        
-    </div>
+    <footer class="footer">
 
-    <div class="footer-web-pages">
-        <h4>WEB PAGES</h4>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/nosotros.html">Nosotros</a></li>
-            <li><a href="../pages/actividades.html">Actividades</a></li>
-            <li><a href="../pages/actividades.html#seccion_liga">Liga</a></li>
-            <li><a href="../pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
-            <li><a href="../pages/actividades.html#seccion_estadios">Estadios</a></li>
-            <li><a href="../pages/shop.html">Tienda</a></li>
-            <li><a href="../pages/gallery.html">Galería</a></li>
-            <li><a href="../pages/download.html">Download</a></li>
-            <li><a href="../pages/contact.html">Contacto</a></li>
-        </ul>
-    </div>
+        <div class="container vertical left">
 
-    <div class="footer-redes">
-        <h4>REDES</h4>
-        <ul>
-            <li>
+            <a class="container horizontal center margin5-bot" style="color: white; text-decoration: none;"
+                href="/index.html">
+                <img src="/img/logo.png" alt="Logo" class="footer-logo-img">
+                <p>Rolling Rivals</p>
+            </a>
+            <div>
+                <a href="/pages/download.html" class="cs-boton-descarga semi-rounded margin5-bot">Download</a>
+            </div>
+            <p>Antonio Calvo Picón</p>
+            <div class="redes-sociales margin5-bot">
                 <a href="https://facebook.com" class="social-icon" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-            </li>
-           <li>
                 <a href="https://twitter.com" class="social-icon" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
-           </li>
-            <li>
                 <a href="https://instagram.com" class="social-icon" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com" class="social-icon" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://discord.com" class="social-icon" target="_blank">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-desarrollador">
-        <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
-        <ul>
-            <li>Developer</li>
-            <li>DyPW</li>
-            <li>2024 - 2025</li>
-            <li>Práctica DyPW</li>
-        </ul>
-    </div>
-
-    <div class="visitas">
-        <div class="counter">
-            Visitaste la página:: <span id="localCount">0</span>
+            </div>
         </div>
-    </div>
-    <!-- Funcionamiento contador local -->
-    <script src="../js/contador.js"></script>
-</footer>
+
+
+        <div class="footer-web-pages container vertical left">
+            <h4>WEB PAGES</h4>
+            <ul>
+                <li class="margin5-bot"><a href="/index.html">Home</a></li>
+                <li class="margin5-bot"><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html">Actividades</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_liga">Liga</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_campeonatos">Campeonatos</a></li>
+                <li class="margin5-bot"><a href="/pages/actividades.html#seccion_estadios">Estadios</a></li>
+                <li class="margin5-bot"><a href="/pages/shop.html">Tienda</a></li>
+                <li class="margin5-bot"><a href="/pages/gallery.html">Galería</a></li>
+                <li class="margin5-bot"><a href="/pages/download.html">Download</a></li>
+                <li class="margin5-bot"><a href="/pages/contact.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-redes container vertical">
+            <h4>REDES</h4>
+            <ul>
+                <li>
+                    <a href="https://facebook.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        <p> facebook</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <p> twitter</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <p> instagram</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <p> tiktok</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.com" class="social-icon container horizontal" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <p> discord</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-desarrollador container vertical left">
+            <h4>SOBRE EL DESARROLLADOR/PRÁCTICA</h4>
+            <ul>
+                <li class="margin5-bot">Developer</li>
+                <li class="margin5-bot">DyPW</li>
+                <li class="margin5-bot">2024 - 2025</li>
+                <li class="margin5-bot">Práctica DyPW</li>
+            </ul>
+        </div>
+        <div class="visitas container horizontal">
+            <div class="counter">
+                Visitaste la página: <span id="localCount">0</span>
+            </div>
+        </div>
+        <div class="footer-bottom margin5-bot">
+            <p>Made with lots of love</p>
+            <p>English</p>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy policy</a>
+        </div>
+    </footer>
 </body>
 </html>
