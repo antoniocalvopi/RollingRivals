@@ -1,25 +1,27 @@
-# Rolling Rivals - Carrera de Canicas (Entrega 2 / html)
-
+# Rolling Rivals - Carrera de Canicas (Entrega 3 / CSS)
+[![Ver Demo](https://img.shields.io/badge/Ver_Demo-Click_Here-brightgreen)]()
+[![Instalar](https://img.shields.io/badge/Instalar-Click_Here-blue)](/doc/instrucciones-levantar-servidor.MD)
+[![Star](https://img.shields.io/github/stars/usuario/repositorio?style=social)](https://github.com/antoniocalvopi/RollingRivals)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 ## Descripción
 
 **Rolling Rivals** es un proyecto de carrera de canicas donde los usuarios pueden seguir en "tiempo real" las actividades de los equipos, ligas, campeonatos, y estadios. Este proyecto integra diversas tecnologías HTML5 y APIs para mejorar la experiencia interactiva y dinámica del usuario, permitiendo actualizaciones en "tiempo real" (sse) y geolocalización.
 
 ---
 
-## Estructura del Proyecto
+## 🏗️ Estructura del Proyecto
 
-El proyecto está compuesto por:
-- **index.html**: landing page, donde se encuentra diferentes secciones como header, body(banner,ligas, galeria imagenes y download) y el footer.
-- **actividades.html**: Información sobre las actividades de la carrera.
-- **liga.html**: Información sobre las ligas de canicas. En esta página y las relacionadas se usará sse con php para actualizar los datos.
-- **campeonatos.html**: Detalles sobre los campeonatos en curso.
-- **estiadios.html**: Información sobre los estadios donde se realizan las carreras.
-- **download.html**: Página de descarga el juego de carreras canicas.
-- **gallery.html**: galería de vídeo e imagenes.
-- **nosotros.html**: infomarción esencial sobre la web y el equipo que lo compone.
-- **shop.html**: tienda de la web, se intentará implementar sse para actualizar los productos además de una pasarela sencilla de pago(a modo demo, es decir, no funcional al 100%).
+```plaintext
+├── CSS/             # Contiene los css del proyecto        
+├── img/             # Contiene las imagenes del proyecto
+├── js/              # Contiene los scripts del proyecto
+├── pages/           # Contiene las páginas del proyecto
+├── py_server/       # Contiene recursos necesarios para levantar servidor php y web.
+├── index.html       # Página principal del proyecto
+└── README.md        # Readme del proyecto
+```
 
-### Etiquetas HTML Usadas
+## 🔖 Etiquetas HTML Usadas
 
 - **`<section>`**: Para organizar el contenido de actividades, ligas, campeonatos, estadios..etc.
 - **`<h1>, <h2>, <h3>`**: Para los títulos de las secciones.
@@ -32,7 +34,7 @@ El proyecto está compuesto por:
 
 ---
 
-## Iconografía
+## 😙 Iconografía
 
 Se usa **Font Awesome** para añadir iconografía a la página y mejorar la visualización de los iconos de redes sociales entre otros.
 
@@ -56,7 +58,7 @@ Este enlace permite el uso de los íconos de Font Awesome sin necesidad de desca
 
 ---
 
-## APIs HTML5 Usadas
+## 🧑‍💻 APIs HTML5 Usadas
 
 ### 1. **Geolocalización y Mapa con Leaflet**
 
@@ -82,20 +84,24 @@ La información sobre las actividades, ligas, campeonatos y estadios se actualiz
 
 ---
 
-## Instalación
-
-1. Clona el repositorio en tu máquina local:
+## 🧑‍🔧 Instalación
+#### Opción 1:
+1. **Clona el repositorio en tu máquina local**:
    ```bash
    git clone https://github.com/antoniocalvopi/RollingRivals
    ```
 
-2. Asegúrate de tener un servidor local (Apache, XAMPP, etc.) corriendo para servir el archivo `sse.php`, necesario para las actualizaciones en tiempo real.
+2. **Asegúrate de tener un servidor local (Apache, XAMPP, etc.) corriendo para servir el archivo `sse.php`**, necesario para las actualizaciones en tiempo real.
 
-3. Accede al proyecto desde tu navegador.
+3. **Accede al proyecto desde tu navegador**.
+
+#### Opción 2:
+1. **Uso de recursos proporcionados en el directorio `/py_server`**:
+   Para ejecutar los servidores de PHP y Web localmente, puedes usar los scripts proporcionados en el directorio `/py_server`. Los pasos para iniciarlos se describen en la [documentación](/doc/).
 
 ---
 
-## PHP
+## 🐘 PHP
 
 ### Explicación del código PHP
 
@@ -126,7 +132,7 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 
 ---
 
-## Uso
+## 👂 Uso
 
 1. **Explora las actividades y carreras**: Sigue en tiempo real los eventos de Rolling Rivals.
 2. **Interactúa con el mapa**: Observa tu ubicación actual y encuentra el Centro Universitario de Mérida.
@@ -134,7 +140,7 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 
 ---
 
-## Créditos
+## 💳 Créditos
 
 - **Font Awesome** para la iconografía.
 - **Leaflet** para la creación del mapa interactivo.
@@ -144,6 +150,6 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 ---
 
 
-¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho cariño y dedicación por **Antonio Calvo**. Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo.
+¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho 💖 y dedicación por **Antonio Calvo**. Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo 🧑‍💻.
 
 ---
