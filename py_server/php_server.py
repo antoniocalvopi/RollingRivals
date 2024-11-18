@@ -3,7 +3,7 @@ import os
 import platform
 
 def run_php_server():
-    php_root = "./php_server" 
+    php_root = "./py_server" 
     php_port = 3000  
 
     # Detectar el sistema operativo
@@ -12,6 +12,8 @@ def run_php_server():
         php_command = "php"
     elif os_type == "Darwin":  # macOS
         php_command = "/usr/local/bin/php"  # ruta de php en macOS
+    elif os_type == "Linux":  # Linux/Ubuntu
+        php_command = "/usr/bin/php"  # ruta de php en Linux/Ubuntu
     else:
         print(f"Sistema operativo no soportado: {os_type}")
         return

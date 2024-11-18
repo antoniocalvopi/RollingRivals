@@ -188,7 +188,7 @@ section a {
     background-color: #ff6b81;
 }
 
-/* móvil */
+/* móvil */ 
 @media screen and (max-width: 768px) {
     section a {
         font-size: 16px;
