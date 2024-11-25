@@ -11,7 +11,7 @@ def run_php_server():
     if os_type == "Windows":
         php_command = "php"
     elif os_type == "Darwin":  # macOS
-        php_command = "/usr/local/bin/php"  # ruta de php en macOS
+        php_command = "/opt/homebrew/bin/php"  # ruta de php en macOS
     elif os_type == "Linux":  # Linux/Ubuntu
         php_command = "/usr/bin/php"  # ruta de php en Linux/Ubuntu
     else:
