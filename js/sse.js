@@ -1,5 +1,5 @@
 // Crear conexión con el servidor usando SSE
-const eventSource = new EventSource('http://localhost:3000/json_xml.php');
+const eventSource = new EventSource('http://localhost:3000/sse.php');
 
 // Escuchar eventos enviados desde el servidor
 eventSource.onmessage = function (event) {

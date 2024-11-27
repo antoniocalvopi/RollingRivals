@@ -2,13 +2,18 @@
 header('Access-Control-Allow-Origin: *');  
 header('Access-Control-Allow-Methods: GET');
 
-// Datos aleatorios
-$data = [
-    ['team' => 'Equipo 1', 'wins' => rand(50, 100), 'losses' => rand(0, 50)],
-    ['team' => 'Equipo 2', 'wins' => rand(50, 100), 'losses' => rand(0, 50)],
-    ['team' => 'Equipo 3', 'wins' => rand(50, 100), 'losses' => rand(0, 50)],
-    ['team' => 'Equipo 4', 'wins' => rand(50, 100), 'losses' => rand(0, 50)]
-];
+$data = [];
+for ($i = 1; $i <= 4; $i++) {
+    $wins = rand(50, 100);
+    $losses = rand(0, 50);
+    $data[] = [
+        'position' => $i,
+        'team' => "Equipo $i",
+        'played' => $wins + $losses,
+        'wins' => $wins,
+        'losses' => $losses,
+    ];
+}
 
 // Detectar si es una conexión SSE
 if (isset($_GET['sse']) && $_GET['sse'] === 'true') {
