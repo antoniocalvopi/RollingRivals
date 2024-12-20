@@ -8,7 +8,6 @@ p {
     color: var(--bodyTextColor);
 }
 
-/* About Us Section */
 #cs-about-section {
     display: flex;
     justify-content: space-between;
@@ -110,7 +109,6 @@ p {
     margin-top: 1rem;
 }
 
-/* Mission Section */
 #cs-mission-section {
     padding: 4rem;
     text-align: left;
@@ -146,7 +144,6 @@ p {
     text-align: justify;
 }
 
-/* Team Section */
 #cs-team-section {
     padding: 4rem;
     text-align: center;
@@ -189,7 +186,6 @@ p {
     margin-bottom: 0.5rem;
 }
 
-/* movíl */
 @media screen and (max-width: 768px) {
     #cs-about-section {
         display: block;
@@ -288,7 +284,6 @@ p {
         margin-top: 1rem;
     }
     
-    /* Mission Section */
     #cs-mission-section {
         padding: 4rem;
         text-align: center;

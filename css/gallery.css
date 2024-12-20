@@ -49,7 +49,6 @@
     transform: scale(1.2); 
 }
 
-/* móvil */
 @media screen and (max-width: 768px) {
     .cs-section {
         padding: 10px;

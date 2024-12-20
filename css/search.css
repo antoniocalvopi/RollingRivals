@@ -1,11 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
 
-/* Sección Buscador */
-.cs-search-section {
-    margin: 0;
-    padding: 0;
-}
-
 .cs-search-section {
     display: flex;
     align-items: center;
@@ -14,7 +8,6 @@
     margin-top: 12rem;
 }
 
-/* Input del buscador */
 .search-input {
     flex: 1;
     padding: 10px 20px;
@@ -33,7 +26,6 @@
     font-style: italic;
 }
 
-/* Botones */
 .search-btn {
     padding: 10px 20px;
     border-radius: 25px;
@@ -71,18 +63,38 @@
     color: black;
 }
 
-/* Iconos en los botones */
 .search-btn::before {
     display: inline-block;
 }
 
 .search-btn::before {
     display: inline-block;
+}
+
+.cart-icon, .balance-icon {
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#saldo {
+    margin-left: 5px;
+    font-size: 14px;
 }
 
 
 @media screen and (max-width: 768px) {
-    /* Sección Buscador */
     .cs-search-section {
         display: flex;
         flex-direction: row;
@@ -94,14 +106,12 @@
         padding: 0; 
     }
 
-    /* Input del buscador */
     .search-input {
         padding: 0;
         font-size: 14px; 
         padding-left: 5px;
     }
 
-    /* Botones */
     .search-btn {
         width: fit-content; 
         padding: 12px;

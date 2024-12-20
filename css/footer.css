@@ -1,129 +1,34 @@
-@import url(/css/assets.css);
-
-/* Footer */
+@import url(colors.css);
 footer {
     background-color: #07090E;
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    background-color: #131313; 
+    color: #ffffff;
 }
 
-.footer-logo-img {
-    width: 15%;
-    height: auto;
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.social-icon {
-    color: #fff;
-    margin: 0 10px;
-    transition: color 0.3s;
-    text-decoration: none;
+a {
+    transition: color 0.3s ease !important;
 }
 
-.social-icon i {
-    padding-right: 8px;
+a:hover {
+    color: var(--secondary) !important;
 }
 
-.social-icon:hover {
-    color: #ff4757;
+footer .btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
 }
 
-.footer-web-pages h4,
-.footer-redes h4,
-.footer-desarrollador h4 {
-    color: #787B81;
-    font-size: 16px;
+footer .btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--secondary);
 }
 
-.footer-web-pages ul,
-.footer-redes ul,
-.footer-desarrollador ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-web-pages ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.footer-web-pages ul li a:hover {
-    color: #ff4757;
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #787B81;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.footer-bottom p,
-.footer-bottom a {
-    padding: 0 15px;
-    font-size: 14px;
-}
-
-.footer-bottom a {
-    text-decoration: none;
-    color: #787B81;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
-
-.visitas {
-    text-align: center;
-}
-
-.counter {
-    color: #787B81;
-    font-size: 14px;
-}
-
-/* movíl */
-@media (max-width: 600px) {
-    footer {
-        padding: 15px;
-        gap: 10px; 
-    }
-
-    .footer-logo-img {
-        width: 25px;
-        height: auto; 
-    }
-
-    .cs-boton-descarga {
-        width: 65px;
-        height: auto;
-        font-size: 15px;
-    }
-
-    footer p{
-        font-size: 15px;
-    }
-
-    div.container.vertical.left {
-        max-height: 125px;
-    }
-
-    .social-icon {
-        font-size: 14px; 
-    }
-
-    .footer-web-pages ul li a {
-        font-size: 12px;
-    }
-
-    .footer-bottom {
-        gap: 8px;
-        margin-top: 10px;
-    }
+footer .border-top {
+    border-color: rgba(255, 255, 255, 0.1);
 }

@@ -1,6 +1,6 @@
 @import url(/css/colors.css);
 .main-seccion {
-    margin-top: 12rem;
+    margin-top: 30px;
 }
 .container {
     display: flex;
@@ -29,6 +29,7 @@
     border-radius: 10px;
 }
 .card h4 {
+    color: var(--bodyTextColor) !important;
     margin: 10px 0;
 }
 .card .price {

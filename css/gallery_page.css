@@ -111,7 +111,6 @@ button.see-more:hover {
     background-color: var(--primaryLight);
 }
 
-/* Movil */
 @media (max-width: 768px) {
     .gallery {
         margin-top: 100px;

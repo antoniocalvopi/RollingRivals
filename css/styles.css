@@ -30,7 +30,6 @@ section a {
     margin-bottom: 10px;
 }
 
-/* Banner */
 .cs-game-banner {
     margin: 0;
     padding: 0;
@@ -77,7 +76,6 @@ section a {
     padding: 60px 0 0 0; 
 }
 
-/* Clasificación por Ligas */
 .cs-clasificacion-ligas {
     background-color: #1c1c1c;
     border: 1px solid #ffffff52;
@@ -188,7 +186,6 @@ section a {
     background-color: #ff6b81;
 }
 
-/* móvil */ 
 @media screen and (max-width: 768px) {
     section a {
         font-size: 16px;

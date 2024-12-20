@@ -139,7 +139,6 @@
     max-height: 350px;
 }
 
-/* movil */
 @media (max-width: 768px) {
     .contacto-contenedor {
         flex-direction: column;

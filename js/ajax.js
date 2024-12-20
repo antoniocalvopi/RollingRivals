@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (xhr.status === 200) {
                 const contentType = xhr.getResponseHeader('Content-Type');
                 const teamInfoElement = document.getElementById('team-info');
-                teamInfoElement.innerHTML = ''; // Limpiar la tabla antes de rellenar
+                teamInfoElement.innerHTML = ''; // Limpiar la tabla
 
                 try {
                     if (contentType.includes('application/json')) {
                         // Procesar datos JSON
                         const data = JSON.parse(xhr.responseText);
-                        allData = data; // Almacenar los datos globalmente
-                        populateTable(data); // Llamar a la función para llenar la tabla
+                        allData = data; // Almacenar los datos
+                        addToTable(data); // Llamar a la función para rellenar la tabla
                     } else if (contentType.includes('application/xml')) {
                         // Procesar datos XML
                         const parser = new DOMParser();
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const teams = xmlDoc.getElementsByTagName('team');
                         const data = [];
 
-                        // Convertir los datos XML a un formato de objeto para la tabla
+                        // Convertir los datos XML a formato objeto
                         for (let i = 0; i < teams.length; i++) {
                             data.push({
                                 position: teams[i].getElementsByTagName('position')[0]?.textContent || '',
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             });
                         }
 
-                        allData = data; // Almacenar los datos globalmente
-                        populateTable(data); // Llamar a la función para llenar la tabla
+                        allData = data;
+                        addToTable(data);
                     } else {
                         document.getElementById('output').textContent = 'Formato desconocido.';
                     }
@@ -61,10 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.send();
     }
 
-    // Función para llenar la tabla con los datos
-    function populateTable(data) {
+    function addToTable(data) {
         const teamInfoElement = document.getElementById('team-info');
-        teamInfoElement.innerHTML = ''; // Limpiar la tabla antes de llenarla
+        teamInfoElement.innerHTML = ''; // Limpiar la tabla
 
         data.forEach((team, index) => {
             const row = document.createElement('tr');
@@ -79,22 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Función para filtrar por equipo o posición
-    function filterData(filterType, filterValue) {
-        let filteredData = [];
-
-        if (filterType === 'team') {
-            // Filtrar por nombre del equipo
-            filteredData = allData.filter((team) => team.team.toLowerCase().includes(filterValue.toLowerCase()));
-        } else if (filterType === 'position') {
-            // Filtrar por posición
-            filteredData = allData.filter((team) => team.position == filterValue); // Comparar como número
-        }
+    // Función para filtrar datos según el valor ingresado
+    function filterData(filterValue) {
+        const filteredData = allData.filter((team) => 
+            team.team.toLowerCase().includes(filterValue.toLowerCase()) || 
+            team.position == filterValue
+        );
 
         // Mostrar los datos filtrados
-        populateTable(filteredData);
+        addToTable(filteredData);
 
-        // Mensaje si no se encontraron resultados
         if (filteredData.length === 0) {
             document.getElementById('output').textContent = 'No se encontraron resultados para el filtro aplicado.';
         } else {
@@ -102,54 +95,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Manejar el evento de filtrado
     document.getElementById('filter-btn').addEventListener('click', () => {
-        const filterType = document.getElementById('filter-type').value;
-        const filterValue = document.getElementById('filter-value').value; 
-
+        const filterValue = document.getElementById('filter-value').value;
 
         if (filterValue.trim() === '') {
-            // Si el campo está vacío, mostrar todos los datos
-            populateTable(allData);
+            addToTable(allData);
             document.getElementById('output').textContent = '';
         } else {
-            filterData(filterType, filterValue); // Aplicar el filtro
+            filterData(filterValue); // Aplicar el filtro
         }
     });
 
-    document.getElementById('filter-value').addEventListener('keyup', () => 
-    {
-        const filterType = document.getElementById('filter-type').value;
-        const filterValue = document.getElementById('filter-value').value; 
-
+    document.getElementById('filter-value').addEventListener('keyup', () => {
+        const filterValue = document.getElementById('filter-value').value;
 
         if (filterValue.trim() === '') {
-            // Si el campo está vacío, mostrar todos los datos
-            populateTable(allData);
+            addToTable(allData);
             document.getElementById('output').textContent = '';
         } else {
-            filterData(filterType, filterValue); // Aplicar el filtro
+            filterData(filterValue); // Aplicar el filtro
         }
     });
-
-    // Escuchar por eventos SSE (actualizaciones en tiempo real)
-    if (window.EventSource) {
-        const eventSource = new EventSource(serverUrl); // La URL sin parámetros adicionales para SSE
-
-        eventSource.onmessage = function (event) {
-            try {
-                const data = JSON.parse(event.data);
-                allData = data; // Almacenar los datos globalmente
-                populateTable(data); // Actualizar la tabla con los nuevos datos
-            } catch (error) {
-                console.error("Error al procesar los datos SSE: ", error);
-            }
-        };
-
-        eventSource.onerror = function (error) {
-            console.error("Error en la conexión SSE: ", error);
-        };
-    } else {
-        console.log('Tu navegador no soporta SSE.');
-    }
 });

@@ -1,4 +1,4 @@
-# Funcionalidades Responsive y CSS  - Entrega CSS
+# Funcionalidades Responsive y CSS  - Entrega 3 CSS
 
 ## **Tabla de Contenidos**
 1. [Responsive](#Responsive)
@@ -12,7 +12,7 @@
 ### **Uso de media queries para Responsive design**
 El diseño responsivo se implementa mediante media queries los diferentess ficheros [CSS](/css/). Por ejemplo:
 
-```css
+```css   
 @media and Screen (max-width: 768px) { /* Versión mobile*/
     body {
         font-size: 14px;
