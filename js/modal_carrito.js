@@ -5,7 +5,8 @@ $(document).ready(function () {
     var $cartTotal = $('#cart-total');
     var $cartContainer = $('#cart-container');
     var $checkoutBtn = $('#checkout-btn');
-
+    $cartBadge.hide();
+    
     const getCookie = (name) => {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);
@@ -27,6 +28,11 @@ $(document).ready(function () {
     const saveCartToCookies = (cart) => {
         setCookie("cart", JSON.stringify(cart), 365);  
         $cartBadge.text(cart.length); 
+        if (cart.length === 0) {
+            $cartBadge.hide();
+        } else {
+            $cartBadge.show();
+        }
     };
 
     if (!getCookie("saldo")) {
@@ -49,7 +55,7 @@ $(document).ready(function () {
             let total = 0;
             cartItems.forEach(item => {
                 const itemTotal = item.price * item.quantity;
-
+                total += itemTotal;
                 $cartContainer.append(`
                     <div class="cart-item" data-id="${item.id}">
                         <img src="${item.image}" alt="${item.name}" class="cart-item-image">
@@ -64,6 +70,7 @@ $(document).ready(function () {
                 `);
             });
             
+            $cartTotal.text(total.toFixed(2));
             $cartBadge.text(cartItems.length)
         }
     };
@@ -150,7 +157,7 @@ $(document).ready(function () {
             saveCartToCookies([]);  
             updateCart(); 
             updateBalanceDisplay(); 
-
+    
             alert('Compra realizada con éxito.');
         }
     });
