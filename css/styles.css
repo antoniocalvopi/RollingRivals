@@ -186,6 +186,10 @@ section a {
     background-color: #ff6b81;
 }
 
+#resulttb {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     section a {
         font-size: 16px;

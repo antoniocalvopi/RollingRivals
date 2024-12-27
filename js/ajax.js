@@ -1,119 +1,88 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // URL del servidor PHP
-    const serverUrl = 'http://localhost:3000/json_xml.php';
+document.addEventListener('DOMContentLoaded', function () {
+    fetchLigas();
+    fetchCampeonatos();
+});
 
-    let allData = [];
-
-    fetchData(); 
-
-    function fetchData(format = '') {
-        const xhr = new XMLHttpRequest();
-        const url = format ? `${serverUrl}?format=${format}` : serverUrl;
-        xhr.open('GET', url, true);
-
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                const contentType = xhr.getResponseHeader('Content-Type');
-                const teamInfoElement = document.getElementById('team-info');
-                teamInfoElement.innerHTML = ''; // Limpiar la tabla
-
-                try {
-                    if (contentType.includes('application/json')) {
-                        // Procesar datos JSON
-                        const data = JSON.parse(xhr.responseText);
-                        allData = data; // Almacenar los datos
-                        addToTable(data); // Llamar a la función para rellenar la tabla
-                    } else if (contentType.includes('application/xml')) {
-                        // Procesar datos XML
-                        const parser = new DOMParser();
-                        const xmlDoc = parser.parseFromString(xhr.responseText, 'application/xml');
-                        const teams = xmlDoc.getElementsByTagName('team');
-                        const data = [];
-
-                        // Convertir los datos XML a formato objeto
-                        for (let i = 0; i < teams.length; i++) {
-                            data.push({
-                                position: teams[i].getElementsByTagName('position')[0]?.textContent || '',
-                                team: teams[i].getElementsByTagName('name')[0]?.textContent || '',
-                                played: teams[i].getElementsByTagName('played')[0]?.textContent || '',
-                                wins: teams[i].getElementsByTagName('wins')[0]?.textContent || '',
-                                losses: teams[i].getElementsByTagName('losses')[0]?.textContent || '',
-                            });
-                        }
-
-                        allData = data;
-                        addToTable(data);
-                    } else {
-                        document.getElementById('output').textContent = 'Formato desconocido.';
-                    }
-                } catch (error) {
-                    document.getElementById('output').textContent = 'Error procesando los datos: ' + error.message;
-                }
-            } else {
-                document.getElementById('output').textContent = `Error: ${xhr.status}`;
-            }
-        };
-
-        xhr.onerror = function () {
-            document.getElementById('output').textContent = 'Error en la conexión.';
-        };
-
-        xhr.send();
-    }
-
-    function addToTable(data) {
-        const teamInfoElement = document.getElementById('team-info');
-        teamInfoElement.innerHTML = ''; // Limpiar la tabla
-
-        data.forEach((team, index) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${team.team}</td>
-                <td>${team.wins + team.losses}</td> 
-                <td>${team.wins}</td>
-                <td>${team.losses}</td>
-            `;
-            teamInfoElement.appendChild(row);
-        });
-    }
-    
-    // Función para filtrar datos según el valor ingresado
-    function filterData(filterValue) {
-        const filteredData = allData.filter((team) => 
-            team.team.toLowerCase().includes(filterValue.toLowerCase()) || 
-            team.position == filterValue
-        );
-
-        // Mostrar los datos filtrados
-        addToTable(filteredData);
-
-        if (filteredData.length === 0) {
-            document.getElementById('output').textContent = 'No se encontraron resultados para el filtro aplicado.';
+$(document).ready(() => {
+    $('#filter-value').on('keyup', () => {
+        const searchValue = $('#filter-value').val();
+        if (searchValue) {
+            search(searchValue);
         } else {
-            document.getElementById('output').textContent = '';
-        }
-    }
-
-    document.getElementById('filter-btn').addEventListener('click', () => {
-        const filterValue = document.getElementById('filter-value').value;
-
-        if (filterValue.trim() === '') {
-            addToTable(allData);
-            document.getElementById('output').textContent = '';
-        } else {
-            filterData(filterValue); // Aplicar el filtro
+            console.log('No search value');
         }
     });
 
-    document.getElementById('filter-value').addEventListener('keyup', () => {
-        const filterValue = document.getElementById('filter-value').value;
-
-        if (filterValue.trim() === '') {
-            addToTable(allData);
-            document.getElementById('output').textContent = '';
+    $('#filter-btn').on('click', () => {
+        const searchValue = $('#filter-value').val();
+        if (searchValue) {
+            search(searchValue);
         } else {
-            filterData(filterValue); // Aplicar el filtro
+            console.log('No search value');
         }
+    });
+
+    $('#reset-btn').on('click', () => {
+        $('#filter-value').val('');
+        resetTablesVisibility();
+        fetchLigas();
+        fetchCampeonatos();
     });
 });
+
+function fetchLigas() {
+    fetch('http://localhost:3000/ligas.php')
+        .then(response => response.json())
+        .then(data => {
+            const ligasTable = document.getElementById('ligasTable').getElementsByTagName('tbody')[0];
+            ligasTable.innerHTML = '';
+            data.forEach(liga => {
+                const row = ligasTable.insertRow();
+                row.insertCell(0).textContent = liga.id;
+                row.insertCell(1).textContent = liga.name;
+                row.insertCell(2).textContent = liga.year;
+            });
+        });
+}
+
+function fetchCampeonatos() {
+    fetch('http://localhost:3000/campeonatos.php')
+        .then(response => response.json())
+        .then(data => {
+            const campeonatosTable = document.getElementById('campeonatosTable').getElementsByTagName('tbody')[0];
+            campeonatosTable.innerHTML = '';
+            data.forEach(campeonato => {
+                const row = campeonatosTable.insertRow();
+                row.insertCell(0).textContent = campeonato.id;
+                row.insertCell(1).textContent = campeonato.name;
+                row.insertCell(2).textContent = campeonato.year;
+            });
+        });
+}
+
+function search(query) {
+    fetch(`http://localhost:3000/search.php?q=${query}`)
+        .then(response => response.json())
+        .then(data => {
+            const resultsTable = document.getElementById('resultsTable').getElementsByTagName('tbody')[0];
+            resultsTable.innerHTML = '';
+            document.querySelector('#resulttb').style.display = 'block';
+            document.querySelector('#ligastb').style.display = 'none';
+            document.querySelector('#campeonatostb').style.display = 'none';
+            data.forEach(item => {
+                const row = resultsTable.insertRow();
+                row.insertCell(0).textContent = item.id;
+                row.insertCell(1).textContent = item.name;
+                row.insertCell(2).textContent = item.year;
+            });
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+function resetTablesVisibility() {
+    document.querySelector('#resulttb').style.display = 'none';
+    document.querySelector('#ligastb').style.display = 'block';
+    document.querySelector('#campeonatostb').style.display = 'block';
+}
