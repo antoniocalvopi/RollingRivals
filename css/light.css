@@ -1,0 +1,143 @@
+* {
+    transition: background-color 0.5s ease, color 2.5s ease, border-color 2.5s ease, box-shadow 2.5s ease;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+.actividades {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.actividades .titulo {
+    color: #000000;
+}
+
+.actividades .descripcion {
+    color: #000000;
+}
+
+.cs-game-banner {
+    background-color: #f8f9fa;
+    color: #000000;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cs-game-banner .cs-container-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cs-game-banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cs-game-banner p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.actividades {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.actividades .titulo {
+    color: #000000;
+}
+
+.cs-clasificacion-ligas {
+    background-color: #f8f9fa;
+    border: 1px solid #00000052;
+    box-shadow: 0px 0px 10px #00000052;
+}
+
+.cs-clasificacion-ligas h3 {
+    padding-top: 10px;
+    font-size: 20px; 
+}
+
+.cs-clasificacion-ligas h3, h4 {
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.cs-clasificacion-ligas table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px; 
+}
+
+.cs-clasificacion-ligas th,
+.cs-clasificacion-ligas td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.cs-clasificacion-ligas th {
+    background-color: #e0e0e0;
+}
+
+.cs-clasificacion-ligas tbody tr:hover {
+    border-radius: 25px;
+    background-color: #e0e0e0;
+    box-shadow: 0px 0px 10px #aaa;
+    border: 1px solid #aaa;
+}
+
+.cs-search-section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 12rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #ffffff;
+    color: #484B51;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.search-input::placeholder {
+    color: #dcdcdc;
+    font-style: italic;
+}
+
+.cs-stadium-button, .cart-icon i, .about-text p, .mission-content p, .team-member h3, .team-member p {
+    color: black;
+}
+
+.white-square {
+    background-color: black;
+}

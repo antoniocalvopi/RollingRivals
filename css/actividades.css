@@ -19,11 +19,11 @@ p {
 table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0; /* Para eliminar el espacio entre celdas */
+    border-spacing: 0; 
     margin-bottom: 20px;
     border: 1px solid #2a2a2a;
     border-radius: 10px;
-    overflow: hidden; /* Ocultar bordes interiores que se salgan */
+    overflow: hidden; 
 }
 
 table th, table td {

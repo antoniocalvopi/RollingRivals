@@ -16,6 +16,7 @@
     <script src="/js/contador.js" defer></script>
     <script src="/js/header.js" defer></script>
     <script src="/js/highlight.js" defer></script>
+    <script src="/js/themes.js" defer></script>
     <title>About Us</title>
 </head>
 
@@ -84,6 +85,9 @@
             <div class="cs-user-group">
                 <a href="">Sign In</a>
             </div>
+
+            <button id="toggleButton" class="fa fa-sun"></button>
+
         </div>
     </header>
     <!-- About Us Section -->
@@ -236,18 +240,8 @@
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>&copy; 2024-25 Antonio Calvo Picón, All rights reserved.</p>
+            <div id="joke-container" style="padding-left: 33.3%;"></div>
             <p class="ms-auto"> Visitaste la página: <span id="localCount"></span> visitas</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter" />
-                        </svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram" />
-                        </svg></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook" />
-                        </svg></a></li>
-            </ul>
         </div>
     </footer>
 </body>
