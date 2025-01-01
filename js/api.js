@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch(weatherApiUrl)
         .then(response => response.json())
         .then(data => {
-            const weatherContainer = document.getElementById('weather-container');
-            const weatherInfo = `
-                <p>Tiempo actual en Madrid:</p>
-                <p>Temperatura: ${data.current_weather.temperature}°C</p>
-                <p>Viento: ${data.current_weather.windspeed} km/h</p>
-            `;
-            weatherContainer.innerHTML = weatherInfo;
-            console.log(data);
+            if(document.getElementById('weather-container')){
+                const weatherContainer = document.getElementById('weather-container');
+                const weatherInfo = `
+                    <p>Tiempo actual en Madrid:</p>
+                    <p>Temperatura: ${data.current_weather.temperature}°C</p>
+                    <p>Viento: ${data.current_weather.windspeed} km/h</p>
+                `;
+                weatherContainer.innerHTML = weatherInfo;
+                console.log(data);
+            }
         })
         .catch(error => console.error('Error al obtener el tiempo:', error));
 

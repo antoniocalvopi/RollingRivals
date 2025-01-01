@@ -29,23 +29,13 @@ Mejoras realizadas:
 
 - php desplegado en home lab
 
-
-Mejoras por realizar:
-- alinear menu a la derecha / center
-	(boton toggle)
-
 - librerias propias desplegadas en home lab
 
 - web desplegada en home lab
 
-
-
-Tareas necesarias
-
-- subir Proyecto a home lab
-- comprobar despliegue de home lab y acceso a librerias
-
-
+Mejoras por realizar:
+- alinear menu a la derecha / center
+	(boton toggle)
 
 Tareas de cara examen
 

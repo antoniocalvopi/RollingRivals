@@ -261,26 +261,38 @@
                 </form>
             </div>
         </div>
-        Monthly digest of what's new and exciting from us.tics.js";
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&copy; 2024-25 Antonio Calvo Picón, All rights reserved.</p>
+            <div id="joke-container" style="padding-left: 33.3%;"></div>
+            <p class="ms-auto"> Visitaste la página: <span id="localCount"></span> visitas</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        //Monthly digest of what's new and exciting from us.tics.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
-      
+
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-          apiKey: "AIzaSyArmvA7Q2Ymj2uWzk_oUZdYmt3zZMVDsFI",
-          authDomain: "rollingrivals-web.firebaseapp.com",
-          projectId: "rollingrivals-web",
-          storageBucket: "rollingrivals-web.firebasestorage.app",
-          messagingSenderId: "998689037858",
-          appId: "1:998689037858:web:403af3a21f47954468747b",
-          measurementId: "G-ZKG1851C72"
+            apiKey: "AIzaSyArmvA7Q2Ymj2uWzk_oUZdYmt3zZMVDsFI",
+            authDomain: "rollingrivals-web.firebaseapp.com",
+            projectId: "rollingrivals-web",
+            storageBucket: "rollingrivals-web.firebasestorage.app",
+            messagingSenderId: "998689037858",
+            appId: "1:998689037858:web:403af3a21f47954468747b",
+            measurementId: "G-ZKG1851C72"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
-      </script>
+    </script>
 </body>
 
 </html>
