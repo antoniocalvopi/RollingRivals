@@ -1,3 +1,5 @@
+import { Config } from './config.js';
+
 $(document).ready(() => {
     let allProducts = []; // Almacenamos todos los productos cargados
     let currentLimit = 5; // Número de productos a mostrar
@@ -5,7 +7,7 @@ $(document).ready(() => {
     // Función para cargar productos
     const fetchProducts = () => {
         $.ajax({
-            url: 'http://localhost:3000/productos.php',
+            url: Config.url + '/productos.php',
             method: 'GET',
             dataType: 'json',
             success: (products) => {
@@ -68,7 +70,7 @@ $(document).ready(() => {
 
     const searchProducts = (searchValue) => {
         $.ajax({
-            url: 'http://localhost:3000/productos.php', 
+            url: Config.url +  '/productos.php', 
             method: 'GET',
             dataType: 'json',
             success: (products) => {

@@ -1,3 +1,5 @@
+import { Config } from './config.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     fetchLigas();
     fetchCampeonatos();
@@ -31,7 +33,7 @@ $(document).ready(() => {
 });
 
 function fetchLigas() {
-    fetch('http://localhost:3000/ligas.php')
+    fetch( Config.url + '/ligas.php')
         .then(response => response.json())
         .then(data => {
             const ligasTable = document.getElementById('ligasTable').getElementsByTagName('tbody')[0];
@@ -46,7 +48,7 @@ function fetchLigas() {
 }
 
 function fetchCampeonatos() {
-    fetch('http://localhost:3000/campeonatos.php')
+    fetch(Config.url + '/campeonatos.php')
         .then(response => response.json())
         .then(data => {
             const campeonatosTable = document.getElementById('campeonatosTable').getElementsByTagName('tbody')[0];
@@ -61,7 +63,7 @@ function fetchCampeonatos() {
 }
 
 function search(query) {
-    fetch(`http://localhost:3000/search.php?q=${query}`)
+    fetch(Config.url + `/search.php?q=${query}`)
         .then(response => response.json())
         .then(data => {
             const resultsTable = document.getElementById('resultsTable').getElementsByTagName('tbody')[0];

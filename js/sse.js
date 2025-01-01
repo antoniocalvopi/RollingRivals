@@ -1,4 +1,6 @@
-const eventSource = new EventSource('http://localhost:3000/sse.php');
+import {Config} from './config.js'
+
+const eventSource = new EventSource(Config.url + '/sse.php');
 
 eventSource.onmessage = function (event) {
     const equipos = JSON.parse(event.data);

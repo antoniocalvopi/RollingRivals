@@ -1,33 +1,33 @@
 * {
-    transition: background-color 0.5s ease, color 2.5s ease, border-color 2.5s ease, box-shadow 2.5s ease;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 body {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
 }
 
 header {
     background-color: #f8f9fa;
-    color: #000000;
+    color: #000000 !important;
 }
 
 .actividades {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
 }
 
 .actividades .titulo {
-    color: #000000;
+    color: #000000 !important;
 }
 
 .actividades .descripcion {
-    color: #000000;
+    color: #000000 !important;
 }
 
 .cs-game-banner {
     background-color: #f8f9fa;
-    color: #000000;
+    color: #000000 !important;
     text-align: center;
     padding: 50px 0;
 }
@@ -49,23 +49,23 @@ header {
 
 .contact-form {
     background-color: #f8f9fa;
-    color: #000000;
+    color: #000000 !important;
 }
 
 .contact-form input,
 .contact-form textarea {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
     border: 1px solid #000000;
 }
 
 .actividades {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
 }
 
 .actividades .titulo {
-    color: #000000;
+    color: #000000 !important;
 }
 
 .cs-clasificacion-ligas {
@@ -123,21 +123,25 @@ header {
     border: 1px solid #ccc;
     outline: none;
     background-color: #ffffff;
-    color: #484B51;
+    color: #484B51 !important;
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 10px;
 }
 
 .search-input::placeholder {
-    color: #dcdcdc;
+    color: #dcdcdc !important;
     font-style: italic;
 }
 
 .cs-stadium-button, .cart-icon i, .about-text p, .mission-content p, .team-member h3, .team-member p {
-    color: black;
+    color: black !important;
 }
 
 .white-square {
-    background-color: black;
+    background-color: black !important;
+}
+
+.cs-gallery-title {
+    color: black;
 }
