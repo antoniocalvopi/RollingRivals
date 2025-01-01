@@ -33,7 +33,6 @@ Mejoras realizadas:
 
 - web desplegada en home lab
 
-Mejoras por realizar:
 - alinear menu a la derecha / center
 	(boton toggle)
 
