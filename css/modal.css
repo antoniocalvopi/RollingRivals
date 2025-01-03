@@ -1,6 +1,6 @@
 @import url(colors.css);
 
- .cart-modal {
+.cart-modal {
     color: var(--primary);
     display: none;
     position: fixed;

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const weatherApiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=40.4168&longitude=-3.7038&current_weather=true'; // Coordenadas de Madrid
+    const weatherApiUrl = 'https://api.open-meteo.com/v1/forecast?latitude=38.90&longitude=-6.33&current_weather=true';
     const jokeApiUrl = 'https://official-joke-api.appspot.com/random_joke';
 
     // Obtener datos del tiempo
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if(document.getElementById('weather-container')){
                 const weatherContainer = document.getElementById('weather-container');
                 const weatherInfo = `
-                    <p>Tiempo actual en Madrid:</p>
+                    <p>Tiempo actual en Mérida:</p>
                     <p>Temperatura: ${data.current_weather.temperature}°C</p>
                     <p>Viento: ${data.current_weather.windspeed} km/h</p>
                 `;
