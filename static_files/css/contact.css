@@ -1,0 +1,165 @@
+@import url(/css/colors.css);
+
+.contacto {
+    margin-top: 160px;
+    background: var(--bodyTextColor);
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    max-width: 80%;
+    max-height: fit-content;
+}
+
+.contacto h2 {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.formulario {
+    flex: 1 1 300px;
+    padding-right: 15px;
+}
+
+.formulario h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.formulario label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--secondary);
+}
+
+.formulario textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn-enviar {
+    background: var(--secondary);
+    color: var(--bodyTextColor);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background: var(--bodyTextColor);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+
+.btn-reset {
+    color: var(--secondary);
+    background: var(--bodyTextColor);
+    border: 1px solid var(--secondary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-reset:hover {
+    color: var(--bodyTextColor);
+    background-color: var(--secondary);
+    border: 1px solid var(--bodyTextColor);
+}
+
+.info-contacto {
+    flex: 1 1 300px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+.info-contacto strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.info-contacto p {
+    margin: 0.5rem 0;
+}
+
+.redes-sociales {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.redes-sociales a {
+    color: var(--bodyTextColor);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: var(--secondary);
+}
+
+#map {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 350px;
+}
+
+@media (max-width: 768px) {
+    .contacto-contenedor {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contacto {
+        padding: 1rem;
+    }
+
+    .contacto h2 {
+        font-size: 1.5rem;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        padding: 0.6rem;
+    }
+
+    .btn-enviar {
+        font-size: 0.9rem;
+        margin-bottom: 100px;
+    }
+}

@@ -1,0 +1,291 @@
+@import url(assets.css);
+@import url(colors.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body {
+    background-color: #0E1015;
+    color: #fff;
+    font-size: 1em;
+}
+
+section {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+section a {
+    display: inline-block;
+    background-color: #ff4757;
+    color: #fff;
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.cs-game-banner {
+    margin: 0;
+    padding: 0;
+}
+
+.cs-game-banner div {
+    position: absolute;
+    bottom: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cs-game-banner .cs-banner-image {
+    display: block;
+    width: 100%;
+}
+
+.cs-game-banner a {
+    width: 80%;
+}
+
+.cs-btn-play {
+    width: fit-content;
+    height: auto;
+    font-size: 30px;
+    box-shadow: 0px 0px 10px #ff6b81;
+    border: 1px solid #ff6b81;
+    background-color: #ff4757;
+    animation: clickanimation 0.3s;
+    cursor: pointer;
+}
+
+.cs-btn-play:hover {
+    background-color: #aa303a;
+}
+
+.cs-game-banner h1 {
+    padding: 10px 0px 10px;
+    font-size: 50px; 
+}
+
+.cs-game-banner p {
+    font-size: 35px; 
+    padding: 60px 0 0 0; 
+}
+
+.cs-clasificacion-ligas {
+    background-color: #1c1c1c;
+    border: 1px solid #ffffff52;
+}
+
+.cs-clasificacion-ligas h3 {
+    padding-top: 10px;
+    font-size: 20px; 
+}
+
+.cs-clasificacion-ligas h3, h4 {
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.cs-clasificacion-ligas table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px; 
+}
+
+.cs-clasificacion-ligas th,
+.cs-clasificacion-ligas td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.cs-clasificacion-ligas th {
+    background-color: #2e2e2e;
+}
+
+.cs-clasificacion-ligas tbody tr:hover {
+    border-radius: 25px;
+    background-color: #444;
+    box-shadow: 0px 0px 10px #666;
+    border: 1px solid #666;
+}
+
+.cs-btn-view-more a {
+    display: block;
+    text-align: center;
+    margin: 10px auto; 
+    padding: 8px 15px; 
+    background-color: #ff4757;
+    color: #fff;
+    border-radius: 5px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.cs-btn-view-more a:hover {
+    background-color: #ff6b81;
+}
+
+@keyframes clickanimation {
+    0% {
+        transform: scale(1);
+        background-color: #aa303a;
+    }
+    100% {
+        transform: scale(0.9);
+        background-color: #aa303a;
+    }
+}
+
+#cs-download-section div{
+    margin: 12rem;
+}
+
+.cs-download-text {
+    font-size: 25px;
+    margin: 10px 0 10px;
+}
+
+.fa-solid {
+    font-size: 45px;
+}
+
+.cs-descarga {
+    padding: 40px;
+    text-align: center;
+}
+
+.cs-download-title {
+    margin-bottom: 20px;
+    color: #ff4757;
+    font-size: 28px;
+}
+
+.cs-download-description {
+    margin-bottom: 20px;
+}
+
+.cs-boton-descarga {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    width: auto;
+}
+
+.cs-boton-descarga:hover {
+    background-color: #ff6b81;
+}
+
+#resulttb {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    section a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .cs-game-banner {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .cs-container-text {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cs-container-text p {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cs-container-text h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .cs-btn-play {
+        font-size: 1rem; 
+        padding: 8px 16px;
+    }
+
+    .cs-banner-image {
+        object-fit: none;
+        height: 100%;
+        margin: 0;
+    }
+
+    .cs-clasificacion-ligas table {
+        font-size: 20px;
+    }
+
+    .cs-clasificacion-ligas th,
+    .cs-clasificacion-ligas td {
+        padding: 8px;
+    }
+
+    .cs-clasificacion-ligas td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cs-clasificacion-ligas th {
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+    
+    .cs-clasificacion-ligas td:nth-child(3),
+    .cs-clasificacion-ligas th:nth-child(3) {
+        display: none;
+    }
+
+    .cs-btn-view-more {
+        font-size: 10px;
+    }
+
+    #cs-download-section div{
+        display: inline-block;
+        margin: 0;
+        margin-top: 130px
+    }
+
+    .cs-download-text {
+        font-size: 15px;
+    }
+}
+
+#toggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#toggleButton {
+    color: #ffffff;
+}
+
+#toggleButton.fa-sun:hover, #toggleButton.fa-moon:hover {
+    transform: rotate(360deg);
+}

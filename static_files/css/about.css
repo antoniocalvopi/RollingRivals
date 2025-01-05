@@ -1,0 +1,359 @@
+@import url(/css/colors.css);
+
+h1, h2 {
+    color: var(--secondary); 
+}
+
+p {
+    color: var(--bodyTextColor);
+}
+
+#cs-about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    gap: 2rem;
+    margin-top: 12rem;
+}
+
+.about-text {
+    max-width: 50%;
+}
+
+.about-text h1 {
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    text-align: justify;
+}
+
+@keyframes colorchange {
+    0% {
+        color: #ff4757; 
+    }
+    25% {
+        color: #1e90ff; 
+    }
+    50% {
+        color: #2ed573; 
+    }
+    75% {
+        color: #ff6348; 
+    }
+    100% {
+        color: #ff4757; 
+    }
+}
+
+.about-text h3 .colored {
+    color: var(--secondary);
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 30px;
+    animation: colorchange 5s infinite;
+    cursor: pointer;
+}
+
+.about-text p {
+    margin: 15px 0 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.white-square {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: var(--bodyTextColor);
+    border-radius: 25px;
+}
+
+.white-square img {
+    position: absolute;
+    width: 215px;
+    height: 215px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.image-bottom-left{
+    bottom: -20px;
+    left: -20px;
+}
+
+.image-top-right {
+    top: -20px;
+    right: -20px;
+}
+
+.image-bottom-left, .image-top-right {
+    transition: ease-in-out 300ms;
+}
+
+.image-bottom-left:hover , .image-top-right:hover {
+    transform: scale(1.2);
+}
+
+.play-button {
+    background-color: var(--secondary);
+    color: var(--bodyTextColor);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#cs-mission-section {
+    padding: 4rem;
+    text-align: left;
+}
+
+#cs-mission-section h2 {
+    font-size: 60px;
+}
+
+.mission-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mission-content img {
+    width: 45%;
+    border-radius: 8px;
+    padding-top: 5px;
+    border-radius: 25px;
+    transition: ease-in-out 300ms;
+}
+
+.mission-content img:hover {
+    border-radius: 15px;
+    transform: scale(1.05);
+}
+
+
+.mission-content p {
+    font-size: 20px;
+    width: 50%;
+    text-align: justify;
+}
+
+#cs-team-section {
+    padding: 4rem;
+    text-align: center;
+}
+
+#cs-team-section h2{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#cs-team-section h3, p {
+    font-size: 20px;
+}
+
+.team-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+
+.team-container div {
+    display: inline-block;
+    min-width: 200px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+    color: var(--bodyTextColor);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--bodyTextColor);
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    #cs-about-section {
+        display: block;
+        margin: 160px 15px 10px 15px;
+        padding: 0;
+    }
+    
+    .about-text {
+        max-width: 100%;
+    }
+    
+    .about-text h1 {
+        font-size: 45px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .about-text h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    @keyframes colorchange {
+        0% {
+            color: #ff4757; 
+        }
+        25% {
+            color: #1e90ff; 
+        }
+        50% {
+            color: #2ed573; 
+        }
+        75% {
+            color: #ff6348; 
+        }
+        100% {
+            color: #ff4757; 
+        }
+    }
+    
+    .about-text h3 .colored {
+        color: var(--secondary);
+        background-color: transparent;
+        text-decoration: none;
+        font-size: 20px;
+        animation: colorchange 5s infinite;
+        cursor: pointer;
+    }
+    
+    .about-text p {
+        margin: 15px 0 15px;
+        font-size: 15px;
+        text-align: justify;
+    }
+    
+    .white-square {
+        margin-top: 50px;
+        display: inline-block;
+        width: 230px;
+        height: 230px;
+    }
+    
+    .white-square img {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+    .image-bottom-left{
+        bottom: -20px;
+        left: -20px;
+    }
+    
+    .image-top-right {
+        top: -20px;
+        right: -20px;
+    }
+    
+    .image-bottom-left, .image-top-right {
+        transition: ease-in-out 300ms;
+    }
+    
+    .image-bottom-left:hover , .image-top-right:hover {
+        transform: scale(1.2);
+    }
+    
+    .play-button {
+        background-color: var(--secondary);
+        color: var(--bodyTextColor);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+    
+    #cs-mission-section {
+        padding: 4rem;
+        text-align: center;
+    }
+    
+    #cs-mission-section h2 {
+        font-size: 45px;
+    }
+    
+    .mission-content {
+        display: inline-block;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .mission-content img {
+        width: 100%;
+        padding-top: 5px;
+        border-radius: 15px;
+        transition: ease-in-out 300ms;
+    }
+
+    
+    
+    .mission-content p {
+        font-size: 17px;
+        padding-top:15px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Team Section */
+    #cs-team-section {
+        padding: 4rem;
+        text-align: center;
+    }
+    
+    #cs-team-section h2{
+        font-size: 45px;
+    }
+    
+    #cs-team-section h3, p {
+        font-size: 20px;
+    }
+    
+    .team-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+    }
+    
+    .team-container div {
+        display: inline-block;
+        min-width: 200px;
+        margin-right: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .team-member {
+        width: 200px;
+        text-align: center;
+        color: var(--bodyTextColor);
+    }
+    
+    .team-member img {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid var(--bodyTextColor);
+        margin-bottom: 0.5rem;
+    }
+}
