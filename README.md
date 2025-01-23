@@ -3,25 +3,42 @@
 [![Instalar](https://img.shields.io/badge/Instalar-Click_Here-blue)](/doc/instrucciones-levantar-servidor.MD)
 [![Star](https://img.shields.io/github/stars/usuario/repositorio?style=social)](https://github.com/antoniocalvopi/RollingRivals)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+## Tabla de Contenidos
+- [Descripción](#descripción)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Etiquetas HTML Usadas](#etiquetas-html-usadas)
+- [Iconografía](#iconografía)
+- [APIs HTML5 Usadas](#apis-html5-usadas)
+- [Instalación](#instalación)
+- [PHP](#php)
+- [Uso](#uso)
+- [FAQ](#faq)
+- [Créditos](#créditos)
+
 ## Descripción
 
-**Rolling Rivals** es un proyecto de carrera de canicas donde los usuarios pueden seguir en "tiempo real" las actividades de los equipos, ligas, campeonatos, y estadios. Este proyecto integra diversas tecnologías HTML5 y APIs para mejorar la experiencia interactiva y dinámica del usuario, permitiendo actualizaciones en "tiempo real" (sse) y geolocalización.
+**Rolling Rivals** es un proyecto de carrera de canicas donde los usuarios pueden seguir en "tiempo real" las actividades de los equipos, ligas, campeonatos, y estadios. Este proyecto integra diversas tecnologías HTML5 y APIs para mejorar la experiencia interactiva y dinámica del usuario, permitiendo actualizaciones en "tiempo real" (sse) y geolocalización. Este proyecto se ha creado con el objetivo de completar la parte práctica de la Asignatura de Diseño y Programación Web (DyPW) del grado de Ingeniería Informática de la Unex.
 
 ---
 
-## 🏗️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```plaintext
-├── CSS/             # Contiene los css del proyecto        
+├── CSS/             # Contiene los css del proyecto
 ├── img/             # Contiene las imagenes del proyecto
 ├── js/              # Contiene los scripts del proyecto
 ├── pages/           # Contiene las páginas del proyecto
 ├── py_server/       # Contiene recursos necesarios para levantar servidor php y web.
 ├── index.html       # Página principal del proyecto
+├── doc/             # Toda la documentación "necesaria" para entender y continuar el desarrollo del proyecto.
+├── LICENSE          # Licencia del proyecto
+├── CODE_OF_CONDUCT.md # Código de conducta del proyecto
+├── CONTRIBUTING.md  # Contribución del proyecto
 └── README.md        # Readme del proyecto
 ```
 
-## 🔖 Etiquetas HTML Usadas
+## Etiquetas HTML Usadas
 
 - **`<section>`**: Para organizar el contenido de actividades, ligas, campeonatos, estadios..etc.
 - **`<h1>, <h2>, <h3>`**: Para los títulos de las secciones.
@@ -34,7 +51,7 @@
 
 ---
 
-## 😙 Iconografía
+## Iconografía
 
 Se usa **Font Awesome** para añadir iconografía a la página y mejorar la visualización de los iconos de redes sociales entre otros.
 
@@ -58,7 +75,7 @@ Este enlace permite el uso de los íconos de Font Awesome sin necesidad de desca
 
 ---
 
-## 🧑‍💻 APIs HTML5 Usadas
+## APIs HTML5 Usadas
 
 ### 1. **Geolocalización y Mapa con Leaflet**
 
@@ -84,7 +101,7 @@ La información sobre las actividades, ligas, campeonatos y estadios se actualiz
 
 ---
 
-## 🧑‍🔧 Instalación
+## Instalación
 #### Opción 1:
 1. **Clona el repositorio en tu máquina local**:
    ```bash
@@ -101,7 +118,7 @@ La información sobre las actividades, ligas, campeonatos y estadios se actualiz
 
 ---
 
-## 🐘 PHP
+## PHP
 
 ### Explicación del código PHP
 
@@ -116,7 +133,7 @@ Este archivo PHP actúa como un servidor de *Server-Sent Events* (SSE) que enví
 
 3. **Envío de los datos al cliente**:
    - `echo "data: " . json_encode($data) . "\n\n";`: Convierte el array de datos en un formato JSON y lo envía al cliente precedido de la etiqueta `data:`. El formato SSE requiere que los eventos se envíen en esta estructura específica.
-   
+
 4. **Flush de datos**:
    - `flush();`: Envía todos los datos del buffer de salida al cliente, asegurando que este reciba la información inmediatamente.
 
@@ -125,31 +142,38 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 ### **Errores Comunes**:
 
 1. **Conexión a través de Eduroam**:
-   - Al utilizar la red Eduroam, es posible que se produzcan errores de conexión, ya que dicha red puede bloquear el acceso a servidores no reconocidos o dominios desconocidos. Esto puede impedir el correcto funcionamiento del acceso al archivo PHP necesario para Server-Sent Events (SSE).
+   - Al utilizar la red Eduroam, es posible que se produzcan errores de conexión, ya que dicha red puede bloquear el acceso a servidores no reconocidos o dominios desconocidos. Esto puede impedir el correcto funcionamiento del acceso al archivo PHP necesario para Server-Sent Events (SSE). Esto solo sucede en caso de tener desplegado los ficheros php en un servidor de "terceros" privado(accesible desde una ip "estática" y un puerto configurado).
 
 2. **Errores de Conexión con SSE**:
    - En algunas ocasiones, la página puede mostrar un mensaje de "Error de conexión con SSE", aunque el contenido generado por el archivo PHP se muestre correctamente. Esto puede deberse a problemas temporales en la comunicación o en la configuración de SSE.
 
 ---
 
-## 👂 Uso
+## Uso
 
-1. **Explora las actividades y carreras**: Sigue en tiempo real los eventos de Rolling Rivals.
+1. **Explora las actividades y carreras**: Sigue en "tiempo real" los eventos de Rolling Rivals.
 2. **Interactúa con el mapa**: Observa tu ubicación actual y encuentra el Centro Universitario de Mérida.
-3. **Administra contenido** (solo para administradores): Agrega o edita equipos, campeonatos y eventos. (feature / futurible)
+3. **Administra contenido** (solo para administradores): Agrega o edita equipos, campeonatos y eventos. (feature / futurible) - Para este futurible sería adecuado implementar un backend y agregar opción de login, pero esto perdería la esencia de Single Web Aplication (SPA).
 
 ---
 
-## 💳 Créditos
+## Créditos
 
 - **Font Awesome** para la iconografía.
 - **Leaflet** para la creación del mapa interactivo.
 - **HTML5 LocalStorage** para el almacenamiento persistente de los datos de visitas.
 - **Server-Sent Events (SSE)** para la actualización en tiempo real de los eventos de carreras.
+- ...
 
 ---
 
+## FAQ
+
+---
 
 ¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho 💖 y dedicación por **Antonio Calvo**. Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo 🧑‍💻.
 
----
+Si este proyecto te resulta útil o simplemente te gusta, considera apoyarlo dejando una ⭐ en el repositorio de GitHub.
+¡Tu apoyo ayuda a que siga creciendo y mejorando! 🚀
+
+👉 [Deja tu estrella aquí](https://github.com/antoniocalvopi/RollingRivals)
