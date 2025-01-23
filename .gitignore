@@ -1,3 +1,5 @@
+.gitignore
+
 # Logs
 logs
 *.log
@@ -9,6 +11,7 @@ firebase-debug.*.log*
 
 # Firebase cache
 .firebase/
+.firebaserc
 
 # Firebase config
 
