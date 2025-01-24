@@ -13,7 +13,7 @@
 - [Instalación](#instalación)
 - [PHP](#php)
 - [Uso](#uso)
-- [FAQ](#faq)
+- [FAQ](#faq---preguntas-frecuentes)
 - [Créditos](#créditos)
 
 ## Descripción
