@@ -71,9 +71,9 @@ WORKDIR /app
 
 # Copia los archivos estáticos al contenedor
 COPY index.html /app/static/
-COPY css/ /app/static/
-COPY js/ /app/static/
-COPY img/ /app/static/
+COPY css/ /app/static/css
+COPY js/ /app/static/js
+COPY img/ /app/static/img
 # Exponer el puerto 8000 para el servidor Web
 EXPOSE 8000
 
@@ -93,7 +93,7 @@ version: '3.9'
 services:
   php-server:
     build:
-      context: ./py_server
+      context: .
       dockerfile: Dockerfile.php
     ports:
       - "3000:3000"
