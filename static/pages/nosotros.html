@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="Antonio Calvo" content="Nombre del Autor">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/contador.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script src="/js/highlight.js" defer></script>
+    <script src="/js/themes.js" defer></script>
+    <script src="/js/api.js" defer></script>
+    <title>About Us</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Logo de navegación -->
+            <a href="/index.html" class="cs-logo" aria-label="back to home">
+                <img src="/img/logo.png" style="width: 30px; height: 30px;" alt="logo" aria-hidden="true"
+                    decoding="async">
+                RollingRivals</a>
+            </a>
+
+            <!-- Navegación principal -->
+            <nav class="cs-nav" role="navigation">
+
+                <!-- Botón de menú para móviles -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+
+                <!-- Envoltura del menú -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="/index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li cs-dropdown" tabindex="0">
+                            <span class="cs-li-link">
+                                <a href="/pages/actividades.html" class="cs-li-link">
+                                    Actividades
+                                    <svg class="cs-drop-icon" xmlns="http://www.w3.org/2000/svg" id="Outline"
+                                        viewBox="0 0 24 24" width="15" height="15">
+                                        <path
+                                            d="M6.41,9H17.59a1,1,0,0,1,.7,1.71l-5.58,5.58a1,1,0,0,1-1.42,0L5.71,10.71A1,1,0,0,1,6.41,9Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </span>
+                            <ul class="cs-drop-ul">
+                                <li class="cs-drop-li"><a href="/pages/liga.html"
+                                        class="cs-li-link cs-drop-link">Ligas</a>
+                                </li>
+                                <li class="cs-drop-li"><a href="/pages/campeonato.html"
+                                        class="cs-li-link cs-drop-link">Campeonatos</a></li>
+                                <li class="cs-drop-li"><a href="/pages/estadios.html"
+                                        class="cs-li-link cs-drop-link">Estadios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Más opciones de navegación -->
+                        <li class="cs-li"><a href="/pages/nosotros.html" class="cs-li-link">Nosotros</a></li>
+                        <li class="cs-li"><a href="/pages/download.html" class="cs-li-link">Download</a></li>
+                        <li class="cs-li"><a href="/pages/shop.html" class="cs-li-link">Tienda</a></li>
+                        <li class="cs-li"><a href="/pages/gallery.html" class="cs-li-link">Galería</a></li>
+                        <li class="cs-li"><a href="/pages/contact.html" class="cs-li-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Grupo de usuario -->
+            <div class="cs-user-group">
+                <a href="">Sign In</a>
+            </div>
+
+            <button id="toggleButton" class="fa fa-sun"></button>
+
+        </div>
+    </header>
+    <!-- About Us Section -->
+    <section id="cs-about-section">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <h3>Bienvenidos a<span onclick="window.location.href='/index.html'" class="colored"> Rolling Rivals</span>,
+                el destino definitivo para todos los amantes del marble racing</h3>
+            <p>Somos un grupo apasionado por las carreras de canicas, un deporte único que combina emoción, estrategia y
+                pura diversión. Lo que comenzó como un simple pasatiempo ha evolucionado en una comunidad global donde
+                canicas de todos los colores, tamaños y estilos compiten por la gloria.</p>
+            <a href="/pages/download.html" class="cs-btn-play ">Play Now</a>
+        </div>
+        <div class="white-square">
+            <img src="../img/nosotros1.jpeg" alt="Imagen 1" class="image-bottom-left">
+            <img src="../img/nosotros2.jpeg" alt="Imagen 2" class="image-top-right">
+        </div>
+    </section>
+
+    <!-- Nuestra Misión -->
+    <section id="cs-mission-section">
+        <h2>Nuestra Misión</h2>
+        <div class="mission-content">
+            <img src="../img/nosotros2.jpeg" alt="imagen sobre la misión">
+            <p>En Rolling Rivals, nuestra misión es llevar la emoción del Marble Racing a todo el mundo. Queremos que te
+                sumerjas en este apasionante universo, donde cada curva, salto y línea de meta es un momento para
+                recordar. Nos dedicamos a crear contenido que te mantenga al filo de tu asiento, ya seas un espectador
+                casual o un fanático acérrimo.</p>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+    <section id="cs-team-section">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="../img/equipo1.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+            <div class="team-member">
+                <img src="../img/equipo2.jpeg" alt="Imagen del miembro del equipo">
+                <h3>Nombre</h3>
+                <p>Descripción</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <div class="col-12 col-md-4 mb-4">
+                    <a href="/index.html" class="d-flex align-items-center mb-3 link-light text-decoration-none">
+                        <img src="/img/logo.png" alt="Logo" class="footer-logo-img me-2" style="width: 40px;">
+                        <p class="mb-0">Rolling Rivals</p>
+                    </a>
+                    <p class="text-light mb-1">Download now and start playing!</p>
+                    <a href="/pages/download.html" class="btn btn-secondary mt-2">Download</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-light">Web Pages</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="/index.html" class="nav-link p-0 text-light">Home</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/nosotros.html"
+                            class="nav-link p-0 text-light">Nosotros</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/actividades.html"
+                            class="nav-link p-0 text-light">Actividades</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/actividades.html#seccion_liga"
+                            class="nav-link p-0 text-light">Liga</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/actividades.html#seccion_campeonatos"
+                            class="nav-link p-0 text-light">Campeonatos</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/actividades.html#seccion_estadios"
+                            class="nav-link p-0 text-light">Estadios</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/shop.html" class="nav-link p-0 text-light">Tienda</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/gallery.html" class="nav-link p-0 text-light">Galería</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="/pages/download.html"
+                            class="nav-link p-0 text-light">Download</a></li>
+                    <li class="nav-item mb-2"><a href="/pages/contact.html" class="nav-link p-0 text-light">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5 class="text-light">Redes Sociales</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="https://facebook.com" class="nav-link p-0 text-light d-flex align-items-center">
+                            <i class="fab fa-facebook-f me-2"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://twitter.com" class="nav-link p-0 text-light d-flex align-items-center">
+                            <i class="fab fa-twitter me-2"></i> Twitter
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://instagram.com" class="nav-link p-0 text-light d-flex align-items-center">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://tiktok.com" class="nav-link p-0 text-light d-flex align-items-center">
+                            <i class="fab fa-tiktok me-2"></i> TikTok
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="https://discord.com" class="nav-link p-0 text-light d-flex align-items-center">
+                            <i class="fab fa-discord me-2"></i> Discord
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-secondary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&copy; 2024-25 Antonio Calvo Picón, All rights reserved.</p>
+            <div id="joke-container" style="padding-left: 33.3%;"></div>
+            <p class="ms-auto"> Visitaste la página: <span id="localCount"></span> visitas</p>
+        </div>
+    </footer>
+</body>
+
+</html>
