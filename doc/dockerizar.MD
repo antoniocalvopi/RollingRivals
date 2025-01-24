@@ -70,10 +70,11 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copia los archivos estáticos al contenedor
-COPY index.html /app/static/
-COPY css/ /app/static/
-COPY js/ /app/static/
-COPY img/ /app/static/
+COPY index.html /app/
+COPY pages/ /app/pages
+COPY css/ /app/css/
+COPY js/ /app/js/
+COPY img/ /app/img/
 # Exponer el puerto 8000 para el servidor Web
 EXPOSE 8000
 
@@ -93,7 +94,7 @@ version: '3.9'
 services:
   php-server:
     build:
-      context: ./py_server
+      context: .
       dockerfile: Dockerfile.php
     ports:
       - "3000:3000"
