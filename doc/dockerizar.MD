@@ -70,10 +70,10 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copia los archivos estáticos al contenedor
-COPY index.html /app/static/
-COPY css/ /app/static/css
-COPY js/ /app/static/js
-COPY img/ /app/static/img
+COPY index.html /app/
+COPY css/ /app/css
+COPY js/ /app/js
+COPY img/ /app/img
 # Exponer el puerto 8000 para el servidor Web
 EXPOSE 8000
 
