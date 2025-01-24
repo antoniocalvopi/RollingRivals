@@ -1,0 +1,34 @@
+@import url(colors.css);
+footer {
+    background-color: #07090E;
+    background-color: #131313; 
+    color: #ffffff;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a {
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: var(--secondary) !important;
+}
+
+footer .btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+footer .btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--secondary);
+}
+
+footer .border-top {
+    border-color: rgba(255, 255, 255, 0.1);
+}

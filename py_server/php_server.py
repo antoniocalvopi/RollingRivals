@@ -3,8 +3,8 @@ import os
 import platform
 
 def run_php_server():
-    php_root = "./py_server" 
-    php_port = 3000  
+    php_root = "./py_server"
+    php_port = 3000
 
     # Detectar el sistema operativo
     os_type = platform.system()

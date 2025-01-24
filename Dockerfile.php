@@ -4,7 +4,7 @@ FROM php:8.2-cli
 WORKDIR /app
 
 # Copia los archivos necesarios
-COPY /py_server/ /app/
+COPY py_server/ /app/
 
 # Exponer el puerto 3000 para el servidor PHP
 EXPOSE 3000

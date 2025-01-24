@@ -1,0 +1,135 @@
+@import url(colors.css);
+
+.gallery {
+    margin-top: 190px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.section {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.gallery-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.gallery-item img,
+.gallery-item iframe {
+    width: 156px;
+    height: 104px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.gallery-item img:hover,
+.gallery-item iframe:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.details h4 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.details p {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tag, .difficulty {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.tag {
+    background-color: #333;
+}
+
+.difficulty {
+    background-color: #444;
+}
+
+.difficulty.pro {
+    background-color: #ff3333;
+}
+
+.difficulty.medium {
+    background-color: #33aaff;
+}
+
+.difficulty.easy {
+    background-color: #33cc33;
+}
+
+button.view-lineups,
+button.see-more {
+    background-color: var(--secondary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+button.view-lineups:hover,
+button.see-more:hover {
+    background-color: var(--primaryLight);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        margin-top: 100px;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gallery-item img,
+    .gallery-item iframe {
+        width: 100%;
+        height: auto;
+    }
+}
