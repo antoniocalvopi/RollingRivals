@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copia los archivos estáticos al contenedor
 COPY index.html /app/
+COPY pages/ /app/pages
 COPY css/ /app/css
 COPY js/ /app/js
 COPY img/ /app/js
