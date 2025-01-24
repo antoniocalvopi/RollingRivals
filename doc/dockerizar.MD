@@ -38,7 +38,7 @@ Para dockerizar el proyecto, vamos a añadir algunos archivos al directorio raí
 ### **3.1. Dockerfile para el Servidor PHP**
 Este archivo define cómo construir el contenedor que ejecutará el servidor PHP para manejar `sse.php`.
 
-**`py_server/Dockerfile.php`**:
+**`Dockerfile.php`**:
 ```dockerfile
 # Usa una imagen oficial de PHP como base
 FROM php:8.2-cli
