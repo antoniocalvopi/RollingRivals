@@ -200,6 +200,8 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 
     En la documentación [docker](doc/dockerizar.MD) se explica en detalle como relizarlo.
 
+    En la rama de [producción](https://github.com/antoniocalvopi/RollingRivals/tree/production) dispones de ejemplos funcionales de los Dockerfiles y docker-compose.
+
 ---
 
 ¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho 💖 y dedicación por **Antonio Calvo**. Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo 🧑‍💻.
