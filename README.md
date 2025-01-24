@@ -1,5 +1,5 @@
-# Rolling Rivals - Carrera de Canicas (Entrega 3 / CSS)
-[![Ver Demo](https://img.shields.io/badge/Ver_Demo-Click_Here-brightgreen)]()
+# Rolling Rivals - Carrera de Canicas (Parte práctica PyWD - Unex)
+[![Ver Demo](https://img.shields.io/badge/Ver_Demo-Click_Here-brightgreen)](https://antoniocalvopi.github.io/RollingRivals/)
 [![Instalar](https://img.shields.io/badge/Instalar-Click_Here-blue)](/doc/instrucciones-levantar-servidor.MD)
 [![Star](https://img.shields.io/github/stars/usuario/repositorio?style=social)](https://github.com/antoniocalvopi/RollingRivals)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -167,7 +167,38 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 
 ---
 
-## FAQ
+## FAQ - Preguntas Frecuentes
+
+1. ¿Cómo probar el proyecto?
+
+    Para probar el proyecto sigue los pasos de la sección de este README [instalación](#instalación)
+
+2. ¿Qué hacer si encuentro un error de SSE en la consola de desarrollador del navegador?
+    Es común olvidar levantar el servidor php para consumir los php disponibles en el directorio [py_server](py_server/).
+    Para solucionar este problema solo es necesario seguir los pasos en la sección de este README [instalación](#instalación).
+
+    Si surge otro problema no relacionado con la instalación de php y servir los ficheros .php consulta los [errores comunes](#errores-comunes) o puedes abrir una [discusión](https://github.com/antoniocalvopi/RollingRivals/discussions) o crear una [issue](https://github.com/antoniocalvopi/RollingRivals/issues) en el repositorio.
+
+3. ¿Cómo puedo contribuir con le  proyecto?
+
+    Para contribuir al proyecto sigue los pasos de [contribución](CONTRIBUTING.md)
+
+4. ¿Cómo puedo usar el proyecto?
+
+    - *Contribución*: para usar el proyecto puedes [contribuir](CONTRIBUTING.md).
+    - Uso *personal* o *comercial*: para uso personal o incluso comercial lee en detalle la [licencia](LICENSE) que acoje el proyecto.
+
+5. ¿Cómo puedo desplegar el proyecto?
+
+    Para desplegar el proyecto dispones de documentación relacionada.
+    - Para despleguer localmente aquí te proporciono una guía con recursos disponibles en este proyecto para servir los recursos estáticos y php. [levantar servidor](doc/instrucciones-levantar-servidor.MD)
+    - Si deseas desplegarlo para acceder fuera de tu red local [aquí](doc/despliegueRemoto.MD) te proporciono instrucciones de como desplegarlo de diversas formas de forma "gratuita".
+
+6. ¿Se puede dockerizar la aplicación web?
+
+    Para dockerizar la web, los ficheros para levantar los recursos estáticos disponibles en [py_server](py_server/) facilitan mucho el proceso.
+
+    En la documentación [docker](doc/dockerizar.MD) se explica en detalle como relizarlo.
 
 ---
 
