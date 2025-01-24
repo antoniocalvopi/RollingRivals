@@ -117,7 +117,7 @@ Ejecuta el siguiente comando en la raíz del proyecto (donde se encuentra el arc
 docker-compose build
 ```
 
-Esto construirá las imágenes Docker para el servidor PHP y el servidor Web.
+Esto construirá las imágenes Docker para el servidor PHP y el servidor We
 
 ---
 

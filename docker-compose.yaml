@@ -3,7 +3,7 @@ version: '3.9'
 services:
   php-server:
     build:
-      context: ./py_server
+      context: .
       dockerfile: Dockerfile.php
     ports:
       - "3000:3000"
