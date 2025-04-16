@@ -18,6 +18,6 @@
 
 ## Reportando Problemas
 
-Si encuentra algún error o tiene solicitudes de características, por favor abra un issue en el repositorio de GitHub.
+Si encuentra algún error o tiene solicitudes de características, por favor abra un issue en el [repositorio](https://github.com/antoniocalvopi/RollingRivals) de GitHub.
 
 ¡Gracias por contribuir!
