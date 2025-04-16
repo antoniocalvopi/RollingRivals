@@ -204,7 +204,7 @@ Este script se ejecuta en un servidor privado, en caso de fallo en el src del pr
 
 ---
 
-¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho 💖 y dedicación por **Antonio Calvo**. Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo 🧑‍💻.
+¡Gracias por usar **Rolling Rivals**! Este proyecto ha sido creado con mucho 💖 y dedicación por [**Antonio Calvo**](https://github.com/antoniocalvopi). Espero que disfrutes de la experiencia tanto como yo disfruté desarrollándolo 🧑‍💻.
 
 Si este proyecto te resulta útil o simplemente te gusta, considera apoyarlo dejando una ⭐ en el repositorio de GitHub.
 ¡Tu apoyo ayuda a que siga creciendo y mejorando! 🚀
